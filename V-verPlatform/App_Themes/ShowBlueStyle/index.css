@@ -11,36 +11,73 @@ header {
     text-align:center;
 }
 .backStandardMagicarray {
-    width:auto;
-    height:100%;
+    width:70%;
+    height:auto;
     position:absolute;
     animation:cssRotation 60s infinite;
     -webkit-animation:cssRotation 60s infinite; /*Safari and Chrome*/
     animation-timing-function:linear;
     -webkit-animation-timing-function:linear; /* Safari and Chrome */
     z-index:-100;
-    filter: alpha(opacity=80);
-    -moz-opacity: 0.8;
-    -khtml-opacity: 0.8;
-    opacity: 0.8;
+    filter: alpha(opacity=75);
+    -moz-opacity: 0.75;
+    -khtml-opacity: 0.75;
+    opacity: 0.75;
 }
 .bm0 {
-    margin-top:-50%;
-    margin-left:-10%;
-    height:120%;
+margin-top: -40%;
+margin-left: -10%;
+width: 50%;
 }
 .bm1 {
-    margin-top:-70%;
-    margin-left:50%;
-    height:200%;
+margin-top: -80%;
+margin-left: 50%;
+width: 120%;
 }
 .bm2 {
-    margin-top:0%;
-    margin-left:0%;
+margin-top: 5%;
+margin-left: 10%;
+width: 80%;
 }
 .bm3 {
-    margin-top:-10%;
-    margin-left:5%;
+margin-top: 20%;
+margin-left: 80%;
+width: 30%;
+}
+.bm4 {
+margin-top: -40%;
+margin-left: -40%;
+width: 80%;
+}
+.bm5 {
+margin-top: -20%;
+margin-left: 45%;
+width: 50%;
+}
+.bm6 {
+margin-top: 20%;
+margin-left: 25%;
+width: 30%;
+}
+.bm7{
+margin-top: -20%;
+margin-left: 55%;
+width: 80%;
+}
+.bm8 {
+margin-top: -50%;
+margin-left: -5%;
+width: 65%;
+}
+.bm9 {
+margin-top: 4%;
+margin-left: 34%;
+width: 30%;
+}
+.bm10{
+margin-top: -15%;
+margin-left: -10%;
+width: 120%;
 }
 #logo {
     margin-top:-10%;
@@ -49,31 +86,29 @@ header {
     height:auto;
 
 }
-@media only screen and (max-width: 480px) {
-
-}
-
-@media only screen and (max-width: 991px) {
-.backStandardMagicarray {
-    width:100%;
-    height:auto;
-    left:auto;
-    right:auto;
-    position:absolute;
-}
-#logo {
+@media only screen and (max-width: 580px) {
+    #logo {
     width:80%;
     height:auto;
     margin-top:-50%;
+    margin-left:5%;
+    margin-right:5%;
+}
+}
+@media only screen and (min-width: 581px) and (max-width: 950px) {
+    #logo {
+    width:80%;
+    height:auto;
+    margin-top:-30%;
     margin-left:10%;
     margin-right:10%;
-
+    }
 }
-}
-
 @media only screen and (min-width: 992px) {
-
 }
+
+
+
 
 
 

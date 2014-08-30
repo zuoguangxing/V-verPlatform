@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<link href="~/App_Themes/ShowBlueStyle/index.css" rel="stylesheet" />
+<link href="~/Content/css/jquery.fullPage.css" rel="stylesheet" />
+<script src="~/Content/js/jquery.min.js"></script>
+<script src="~/Content/js/jquery-ui.min.js"></script>
+<script src="~/Content/js/jquery.fullPage.min.js"></script>
+<script src="~/Content/js/jquery.shCircleLoader-min.js"></script>
+<script>$('#loader').shCircleLoader();</script>
+<script>
+
+    $(document).ready(function () {
+        $.fn.fullpage({
+            anchors: ['Main', 'Main1', 'Main2', 'Main3', 'Main4', 'Main5']
+        });
+    });
+</script>
+<div id="superContainer" style="top: 0px;">
+    <div class="section" data-anchor="Main" >
+<img class="backStandardMagicarray bm0" src="~/Content/img/BuildUsed/standardMagicarray1.png" />
+<img class="backStandardMagicarray bm1" src="~/Content/img/BuildUsed/standardMagicarray1.png" />
+<img class="backStandardMagicarray bm2" src="~/Content/img/BuildUsed/standardMagicarray1.png" />
+<img id="logo" src="~/Content/img/BuildUsed/logo.png" />
+    </div>
+        <div class="section" data-anchor="Main1" >
+<img class="backStandardMagicarray bm3" src="~/Content/img/BuildUsed/standardMagicarray1.png" />
+<img id="logo1" src="~/Content/img/BuildUsed/logo.png" />
+    </div>
+    <div class="section" data-anchor="Main2" >
+<img class="backStandardMagicarray bm4" src="~/Content/img/BuildUsed/standardMagicarray1.png" />
+<img class="backStandardMagicarray bm5" src="~/Content/img/BuildUsed/standardMagicarray1.png" />
+            <img class="backStandardMagicarray bm6" src="~/Content/img/BuildUsed/standardMagicarray1.png" />
+        </div>
+<div class="section" data-anchor="Main3" >
+
+<img class="backStandardMagicarray bm7" src="~/Content/img/BuildUsed/standardMagicarray1.png" />
+    </div>
+    <div class="section" data-anchor="Main4" >
+        <img class="backStandardMagicarray bm8" src="~/Content/img/BuildUsed/standardMagicarray1.png" />
+<img class="backStandardMagicarray bm9" src="~/Content/img/BuildUsed/standardMagicarray1.png" />
+    </div>
+        <div class="section" data-anchor="Main5" >
+            <img class="backStandardMagicarray bm10" src="~/Content/img/BuildUsed/standardMagicarray1.png" />
+            <img class="backStandardMagicarray bm10" src="~/Content/img/BuildUsed/standardMagicarray1.png" />
+    </div>
+</div>

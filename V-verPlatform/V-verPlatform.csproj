@@ -130,7 +130,9 @@
     <Content Include="Content\js\jquery.fullPage.min.js" />
     <Content Include="Content\js\jquery.min.js" />
     <Content Include="Content\js\jquery.MyFloatingBg.js" />
+    <Content Include="Content\js\jquery.shCircleLoader-min.js" />
     <Content Include="Content\js\jsRotation.js" />
+    <Content Include="Content\js\Loadingjs.js" />
     <Content Include="Content\js\rainyday.js" />
     <Content Include="Content\vegas\jquery.vegas.css" />
     <Content Include="Content\vegas\jquery.vegas.js" />
@@ -172,6 +174,9 @@
     <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\Onetry.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
