@@ -1,0 +1,99 @@
+﻿body {
+    background: url(../../Content/img/BuildUsed/background1.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow-x: hidden;
+}
+header {
+    top:40%;
+    text-align:center;
+}
+.backStandardMagicarray {
+    width:auto;
+    height:100%;
+    position:absolute;
+    animation:cssRotation 60s infinite;
+    -webkit-animation:cssRotation 60s infinite; /*Safari and Chrome*/
+    animation-timing-function:linear;
+    -webkit-animation-timing-function:linear; /* Safari and Chrome */
+    z-index:-100;
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+}
+.bm0 {
+    margin-top:-50%;
+    margin-left:-10%;
+    height:120%;
+}
+.bm1 {
+    margin-top:-70%;
+    margin-left:50%;
+    height:200%;
+}
+.bm2 {
+    margin-top:0%;
+    margin-left:0%;
+}
+.bm3 {
+    margin-top:-10%;
+    margin-left:5%;
+}
+#logo {
+    margin-top:-10%;
+    margin-left:5%;
+    width:40%;
+    height:auto;
+
+}
+@media only screen and (max-width: 480px) {
+
+}
+
+@media only screen and (max-width: 991px) {
+.backStandardMagicarray {
+    width:100%;
+    height:auto;
+    left:auto;
+    right:auto;
+    position:absolute;
+}
+#logo {
+    width:80%;
+    height:auto;
+    margin-top:-50%;
+    margin-left:10%;
+    margin-right:10%;
+
+}
+}
+
+@media only screen and (min-width: 992px) {
+
+}
+
+
+
+
+@keyframes cssRotation
+{
+from {}
+to {
+transform:rotate(360deg);
+-ms-transform:rotate(360deg); /* IE 9 */
+-webkit-transform:rotate(360deg); /* Safari and Chrome */
+}
+}
+
+@-webkit-keyframes cssRotation /* Safari and Chrome */
+{
+from {}
+to {
+transform:rotate(360deg);
+-ms-transform:rotate(360deg); /* IE 9 */
+-webkit-transform:rotate(360deg); /* Safari and Chrome */
+}
+}

@@ -114,6 +114,26 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="App_Themes\ShowBlueStyle\index.css" />
+    <Content Include="Content\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\css\jquery.fullPage.css" />
+    <Content Include="Content\img\BuildUsed\background1.jpg" />
+    <Content Include="Content\img\BuildUsed\logo.png" />
+    <Content Include="Content\img\BuildUsed\standardMagicarray1.png" />
+    <Content Include="Content\js\jquery-ui.min.js" />
+    <Content Include="Content\js\jquery.fullPage.min.js" />
+    <Content Include="Content\js\jquery.min.js" />
+    <Content Include="Content\js\jquery.MyFloatingBg.js" />
+    <Content Include="Content\js\jsRotation.js" />
+    <Content Include="Content\js\rainyday.js" />
+    <Content Include="Content\vegas\jquery.vegas.css" />
+    <Content Include="Content\vegas\jquery.vegas.js" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -130,7 +150,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="App_GlobalResources\" />
     <Folder Include="App_LocalResources\" />
-    <Folder Include="Content\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -140,7 +159,19 @@
     <Content Include="Views\Index\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Themes\BlueStyle\skin.skin" />
+    <Content Include="App_Themes\ShowBlueStyle\skin.skin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\footer.cshtml" />
+    <Content Include="Views\Shared\header.cshtml" />
+    <Content Include="Views\Shared\layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

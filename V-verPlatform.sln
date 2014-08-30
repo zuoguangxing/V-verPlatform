@@ -5,10 +5,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V-verPlatform", "V-verPlatf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V-verPlatform.Tests", "V-verPlatform.Tests\V-verPlatform.Tests.csproj", "{6E0B970B-B79B-4B66-AAFB-BE912107DA9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApplication2", "..\MvcApplication2\MvcApplication2\MvcApplication2.csproj", "{52E07521-E683-4C77-A1C7-AA2589B67BF4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApplication2.Tests", "..\MvcApplication2\MvcApplication2.Tests\MvcApplication2.Tests.csproj", "{4A5F31F0-31BB-4B77-BC2D-0675C96DD5E8}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,14 +19,6 @@ Global
 		{6E0B970B-B79B-4B66-AAFB-BE912107DA9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E0B970B-B79B-4B66-AAFB-BE912107DA9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E0B970B-B79B-4B66-AAFB-BE912107DA9B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{52E07521-E683-4C77-A1C7-AA2589B67BF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{52E07521-E683-4C77-A1C7-AA2589B67BF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{52E07521-E683-4C77-A1C7-AA2589B67BF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{52E07521-E683-4C77-A1C7-AA2589B67BF4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4A5F31F0-31BB-4B77-BC2D-0675C96DD5E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4A5F31F0-31BB-4B77-BC2D-0675C96DD5E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4A5F31F0-31BB-4B77-BC2D-0675C96DD5E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4A5F31F0-31BB-4B77-BC2D-0675C96DD5E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
