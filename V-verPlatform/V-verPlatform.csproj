@@ -124,6 +124,7 @@
     <Content Include="Content\bootstrap\js\bootstrap.min.js" />
     <Content Include="Content\css\jquery.fullPage.css" />
     <Content Include="Content\img\BuildUsed\background1.jpg" />
+    <Content Include="Content\img\BuildUsed\dia1.png" />
     <Content Include="Content\img\BuildUsed\logo.png" />
     <Content Include="Content\img\BuildUsed\standardMagicarray1.png" />
     <Content Include="Content\js\jquery-ui.min.js" />

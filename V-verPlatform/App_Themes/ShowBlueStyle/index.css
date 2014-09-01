@@ -9,6 +9,38 @@ header {
     top:40%;
     text-align:center;
 }
+.wdia {
+padding: 20px;
+padding-left:30px;
+padding-right:30px;
+-webkit-border-radius: 15px;
+-moz-border-radius: 15px;
+position:absolute;
+text-align: left;
+font-family: 微软雅黑, 'Microsoft YaHei';
+font-size: 20px;
+color: #fff;
+line-height:20px;
+z-index:100;
+background-color:rgba(255, 255, 255, 0.30);
+-moz-box-shadow: 3px 3px 10px #fff;
+-webkit-box-shadow: 3px 3px 10px  #fff;
+box-shadow: 3px 3px 10px  #fff;
+text-shadow: 1px 1px #040c3c; 
+}
+.ndia {
+-moz-box-shadow: 3px 3px 10px #2372bd;
+-webkit-box-shadow: 3px 3px 10px  #2372bd;
+box-shadow: 3px 3px 10px #2372bd;
+    padding: 10px;
+    background-color:rgba(28, 0, 144, 0.6);
+}
+.dia1 {
+    margin-top:-15%;
+    margin-left: 50%;
+    height:auto;
+    width: 40%;
+}
 .backStandardMagicarray {
     width:70%;
     height:auto;
@@ -105,13 +137,6 @@ width: 120%;
 }
 @media only screen and (min-width: 992px) {
 }
-
-
-
-
-
-
-
 @keyframes cssRotation
 {
 from {}
