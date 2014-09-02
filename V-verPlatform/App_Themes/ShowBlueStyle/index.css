@@ -10,6 +10,7 @@ header {
     text-align:center;
 }
 .wdia {
+     display:none;
 padding: 20px;
 padding-left:30px;
 padding-right:30px;
@@ -18,28 +19,42 @@ padding-right:30px;
 position:absolute;
 text-align: left;
 font-family: 微软雅黑, 'Microsoft YaHei';
+font-weight:bold;
 font-size: 20px;
 color: #fff;
-line-height:20px;
 z-index:100;
 background-color:rgba(255, 255, 255, 0.30);
 -moz-box-shadow: 3px 3px 10px #fff;
 -webkit-box-shadow: 3px 3px 10px  #fff;
 box-shadow: 3px 3px 10px  #fff;
-text-shadow: 1px 1px #040c3c; 
+text-shadow: 1px 1px #2fabea; 
 }
 .ndia {
+    -webkit-border-radius: 15px;
+-moz-border-radius: 15px;
 -moz-box-shadow: 3px 3px 10px #2372bd;
 -webkit-box-shadow: 3px 3px 10px  #2372bd;
 box-shadow: 3px 3px 10px #2372bd;
     padding: 10px;
-    background-color:rgba(28, 0, 144, 0.6);
+    background-color:rgba(19, 91, 220, 0.60);
 }
 .dia1 {
     margin-top:-15%;
     margin-left: 50%;
     height:auto;
     width: 40%;
+}
+.code1 {
+    filter: alpha(opacity=40);
+-moz-opacity: 0.4;
+-khtml-opacity: 0.4;
+opacity: 0.4;
+position:absolute;
+    width:100%;
+        animation:cssSlide 120s infinite;
+    -webkit-animation:cssSlide 120s infinite; /*Safari and Chrome*/
+    animation-timing-function:linear;
+    -webkit-animation-timing-function:linear; /* Safari and Chrome */
 }
 .backStandardMagicarray {
     width:70%;
@@ -111,32 +126,44 @@ margin-left: -10%;
 width: 120%;
 }
 #logo {
-    margin-top:-10%;
-    margin-left:5%;
-    width:40%;
+    margin-top:-7%;
+    margin-left:25%;
+    width:50%;
     height:auto;
-
 }
 @media only screen and (max-width: 580px) {
     #logo {
     width:80%;
     height:auto;
-    margin-top:-50%;
-    margin-left:5%;
+    margin-top:-20%;
+    margin-left:10%;
     margin-right:5%;
+
 }
+    .wdia {
+        display:none;
+    }
 }
 @media only screen and (min-width: 581px) and (max-width: 950px) {
     #logo {
-    width:80%;
+    width:60%;
     height:auto;
-    margin-top:-30%;
-    margin-left:10%;
+    margin-top:-10%;
+    margin-left:20%;
+    margin-right:20%;
+    }
+    .wdia {
+    width:60%;
+    height:auto;
+    margin-top:-10%;
+    margin-left:5%;
     margin-right:10%;
+    font-size:15px;
     }
 }
 @media only screen and (min-width: 992px) {
 }
+/*css动画*/
 @keyframes cssRotation
 {
 from {}
@@ -146,7 +173,6 @@ transform:rotate(360deg);
 -webkit-transform:rotate(360deg); /* Safari and Chrome */
 }
 }
-
 @-webkit-keyframes cssRotation /* Safari and Chrome */
 {
 from {}
@@ -154,5 +180,22 @@ to {
 transform:rotate(360deg);
 -ms-transform:rotate(360deg); /* IE 9 */
 -webkit-transform:rotate(360deg); /* Safari and Chrome */
+}
+}
+/*****************************/
+@keyframes cssSlide
+{
+from {
+    margin-top:-425%;
+}
+to {
+    margin-top:50%;
+}
+}
+@-webkit-keyframes cssSlide /* Safari and Chrome */
+{
+from {margin-top:-425%;}
+to {
+ margin-top:50%;
 }
 }
