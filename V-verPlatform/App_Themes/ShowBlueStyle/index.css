@@ -1,259 +1,201 @@
 ﻿body {
 }
 .section {
-    background-size:100% ;
-    z-index: -100;
-}
-.sct0 {
-    background-image: url(../../Content/img/BuildUsed/background1.jpg) ;
-}
-
-.sct1 {
-    background-image: url(../../Content/img/BuildUsed/background2.jpg) ;
+     background: url(../../Content/img/BuildUsed/background1.jpg) no-repeat center center fixed;
+     z-index:-100;
 
 }
-.sct2 {
-    background-image: url(../../Content/img/BuildUsed/xk1.jpg) ;
-}
-.sct3 {
-   background-image: url(../../Content/img/BuildUsed/background3.jpg) ;
-}
-
 header {
-    top: 40%;
-    text-align: center;
+    top:40%;
+    text-align:center;
 }
-.mfz2 {
-    position:initial;
-     width:15%;
-}
-.mfz2 {
-    animation: cssyd 4s;
-    -webkit-animation: cssyd 4s ; /*Safari and Chrome*/
-}
-.bdfmz {
-    position: absolute;
-    margin-top: 12%;
-    margin-left: 35%;
-    width: 30%;
-    height: auto;
-    animation: cssjianbian 4s infinite;
-    -webkit-animation: cssjianbian 4s infinite; /*Safari and Chrome*/
-    z-index: -80;
-}
-
-.xxpng {
-    position: absolute;
-    bottom: 4%;
-    margin-left: 30%;
-    width: 40%;
-    animation: cssxxpng 3s infinite;
-    -webkit-animation: cssxxpng 3s infinite; /*Safari and Chrome*/
-           filter: alpha(opacity=70);
-        -moz-opacity: 0.7;
-        -khtml-opacity: 0.7;
-        opacity: 0.7;
-}
-
 .wdia {
-    display: none;
-    padding: 20px;
-    padding-left: 30px;
-    padding-right: 30px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    position: absolute;
-    text-align: left;
-    font-family: 微软雅黑, 'Microsoft YaHei';
-    font-weight: bold;
-    font-size: 20px;
-    color: #fff;
-    z-index: 100;
-    background-color: rgba(255, 255, 255, 0.30);
-    -moz-box-shadow: 3px 3px 10px #fff;
-    -webkit-box-shadow: 3px 3px 10px #fff;
-    box-shadow: 3px 3px 10px #fff;
-    text-shadow: 1px 1px #2fabea;
+     display:none;
+padding: 20px;
+padding-left:30px;
+padding-right:30px;
+-webkit-border-radius: 15px;
+-moz-border-radius: 15px;
+position:absolute;
+text-align: left;
+font-family: 微软雅黑, 'Microsoft YaHei';
+font-weight:bold;
+font-size: 20px;
+color: #fff;
+z-index:100;
+background-color:rgba(255, 255, 255, 0.30);
+-moz-box-shadow: 3px 3px 10px #fff;
+-webkit-box-shadow: 3px 3px 10px  #fff;
+box-shadow: 3px 3px 10px  #fff;
+text-shadow: 1px 1px #2fabea; 
 }
-
 .ndia {
     -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -moz-box-shadow: 3px 3px 10px #2372bd;
-    -webkit-box-shadow: 3px 3px 10px #2372bd;
-    box-shadow: 3px 3px 10px #2372bd;
+-moz-border-radius: 15px;
+-moz-box-shadow: 3px 3px 10px #2372bd;
+-webkit-box-shadow: 3px 3px 10px  #2372bd;
+box-shadow: 3px 3px 10px #2372bd;
     padding: 10px;
-    background-color: rgba(19, 91, 220, 0.60);
+    background-color:rgba(19, 91, 220, 0.60);
 }
-
 .dia1 {
-    margin-top: -15%;
+    margin-top:-15%;
     margin-left: 50%;
-    height: auto;
+    height:auto;
     width: 40%;
 }
-
 .code1 {
-    position: absolute;
-    width: 100%;
-    animation: cssSlide 120s infinite;
-    -webkit-animation: cssSlide 120s infinite; /*Safari and Chrome*/
-    animation-timing-function: linear;
-    -webkit-animation-timing-function: linear; /* Safari and Chrome */
-    filter: alpha(opacity=10);
-    -moz-opacity: 0.1;
-    -khtml-opacity: 0.1;
-    opacity: 0.1;
+    filter: alpha(opacity=40);
+-moz-opacity: 0.4;
+-khtml-opacity: 0.4;
+opacity: 0.4;
+position:absolute;
+    width:100%;
+        animation:cssSlide 120s infinite;
+    -webkit-animation:cssSlide 120s infinite; /*Safari and Chrome*/
+    animation-timing-function:linear;
+    -webkit-animation-timing-function:linear; /* Safari and Chrome */
 }
-
 .backStandardMagicarray {
-    width: 70%;
-    height: auto;
-    position: absolute;
-    animation: cssRotation 60s infinite;
-    -webkit-animation: cssRotation 60s infinite; /*Safari and Chrome*/
-    animation-timing-function: linear;
-    -webkit-animation-timing-function: linear; /* Safari and Chrome */
-    z-index: -80;
-    filter: alpha(opacity=50);
-    -moz-opacity: 0.5;
-    -khtml-opacity: 0.5;
-    opacity: 0.5;
+    width:70%;
+    height:auto;
+    position:absolute;
+    animation:cssRotation 60s infinite;
+    -webkit-animation:cssRotation 60s infinite; /*Safari and Chrome*/
+    animation-timing-function:linear;
+    -webkit-animation-timing-function:linear; /* Safari and Chrome */
+    z-index:-80;
+    filter: alpha(opacity=75);
+    -moz-opacity: 0.75;
+    -khtml-opacity: 0.75;
+    opacity: 0.75;
 }
-.div2 {
-    background :rgba(0, 0, 0, 0.80);
-    width:80%;
-    height:90%;
-    margin-left:10%;
-}
-
 .bm0 {
-    margin-top: -40%;
-    margin-left: -10%;
-    width: 50%;
+margin-top: -40%;
+margin-left: -10%;
+width: 50%;
 }
-
 .bm1 {
-    margin-top: -80%;
-    margin-left: 50%;
-    width: 120%;
+margin-top: -80%;
+margin-left: 50%;
+width: 120%;
 }
-
 .bm2 {
-    margin-top: -30%;
-    margin-left: 10%;
-    width: 80%;
+margin-top: -50%;
+margin-left: 10%;
+width: 80%;
 }
-
 .bm3 {
-    margin-top: -45%;
-    margin-left: 80%;
-    width: 30%;
+margin-top: -45%;
+margin-left: 80%;
+width: 30%;
 }
-
 .bm4 {
-    margin-top: -90%;
-    margin-left: -40%;
-    width: 80%;
+margin-top: -90%;
+margin-left: -40%;
+width: 80%;
 }
-
 .bm5 {
-    margin-top: -70%;
-    margin-left: 45%;
-    width: 50%;
+margin-top: -70%;
+margin-left: 45%;
+width: 50%;
 }
-
 .bm6 {
-    margin-top: -25%;
-    margin-left: 25%;
-    width: 30%;
+margin-top: -25%;
+margin-left: 25%;
+width: 30%;
 }
-
-.bm7 {
-    margin-top: -70%;
-    margin-left: 55%;
-    width: 80%;
+.bm7{
+margin-top:-70%;
+margin-left: 55%;
+width: 80%;
 }
-
 .bm8 {
-    margin-top: -50%;
-    margin-left: -5%;
-    width: 65%;
+margin-top: -50%;
+margin-left: -5%;
+width: 65%;
 }
-
 .bm9 {
-    margin-top: -40%;
-    margin-left: 34%;
-    width: 30%;
+margin-top: -40%;
+margin-left: 34%;
+width: 30%;
 }
-
-.bm10 {
-    margin-top: -15%;
-    margin-left: -10%;
-    width: 120%;
+.bm10{
+margin-top: -15%;
+margin-left: -10%;
+width: 120%;
 }
-
 #logo {
-    margin-top: -7%;
-    margin-left: 30%;
-    width: 40%;
-    height: auto;
+    margin-top:-7%;
+    margin-left:25%;
+    width:50%;
+    height:auto;
 }
-
 @media only screen and (max-width: 580px) {
     #logo {
-        width: 80%;
-        height: auto;
-        margin-top: -20%;
-        margin-left: 10%;
-        margin-right: 5%;
-    }
+    width:80%;
+    height:auto;
+    margin-top:-20%;
+    margin-left:10%;
+    margin-right:5%;
 
-    .bdfmz {
-        margin-top: 15%;
-        margin-left: 20%;
-        width: 60%;
-    }
-    .xxpng {
-            margin-left: 20%;
-    width: 60%;
-    }
-
+}
     .wdia {
-        display: none;
+        display:none;
     }
 }
 @media only screen and (min-width: 581px) and (max-width: 950px) {
     #logo {
-        width: 60%;
-        height: auto;
-        margin-top: -10%;
-        margin-left: 20%;
-        margin-right: 20%;
-    }
-    .section {
-        width:auto;
-        height:100%;
-    }
-        .xxpng {
-                margin-left: 20%;
-    width: 60%;
+    width:60%;
+    height:auto;
+    margin-top:-10%;
+    margin-left:20%;
+    margin-right:20%;
     }
     .wdia {
-        width: 60%;
-        height: auto;
-        margin-top: -10%;
-        margin-left: 5%;
-        margin-right: 10%;
-        font-size: 15px;
-    }
-
-    .bdfmz {
-        margin-top: 15%;
-        margin-left: 20%;
-        width: 60%;
+    width:60%;
+    height:auto;
+    margin-top:-10%;
+    margin-left:5%;
+    margin-right:10%;
+    font-size:15px;
     }
 }
-
 @media only screen and (min-width: 992px) {
+}
+/*css动画*/
+@keyframes cssRotation
+{
+from {}
+to {
+transform:rotate(360deg);
+-ms-transform:rotate(360deg); /* IE 9 */
+-webkit-transform:rotate(360deg); /* Safari and Chrome */
+}
+}
+@-webkit-keyframes cssRotation /* Safari and Chrome */
+{
+from {}
+to {
+transform:rotate(360deg);
+-ms-transform:rotate(360deg); /* IE 9 */
+-webkit-transform:rotate(360deg); /* Safari and Chrome */
+}
+}
+/*****************************/
+@keyframes cssSlide
+{
+from {
+    margin-top:-425%;
+}
+to {
+    margin-top:50%;
+}
+}
+@-webkit-keyframes cssSlide /* Safari and Chrome */
+{
+from {margin-top:-425%;}
+to {
+ margin-top:50%;
+}
 }
