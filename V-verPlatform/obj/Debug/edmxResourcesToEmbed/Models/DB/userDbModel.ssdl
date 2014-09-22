@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="userDBModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="userDBModelStoreContainer">
+    <EntitySet Name="userInfo" EntityType="userDBModel.Store.userInfo" store:Type="Tables" />
+  </EntityContainer>
+  <EntityType Name="userInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="pw" Type="nvarchar" MaxLength="20" />
+    <Property Name="power" Type="tinyint" Nullable="false" />
+  </EntityType>
+</Schema>

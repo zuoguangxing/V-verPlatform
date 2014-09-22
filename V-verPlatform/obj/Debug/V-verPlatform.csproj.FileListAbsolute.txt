@@ -80,3 +80,6 @@ E:\github\V-verPlatform\V-verPlatform\bin\zh-Hans\System.Web.WebPages.Razor.reso
 E:\github\V-verPlatform\V-verPlatform\obj\Debug\V-verPlatform.csprojResolveAssemblyReference.cache
 E:\github\V-verPlatform\V-verPlatform\obj\Debug\V-verPlatform.dll
 E:\github\V-verPlatform\V-verPlatform\obj\Debug\V-verPlatform.pdb
+E:\github\V-verPlatform\V-verPlatform\bin\EntityFramework.dll
+E:\github\V-verPlatform\V-verPlatform\bin\EntityFramework.xml
+E:\github\V-verPlatform\V-verPlatform\bin\zh-Hans\EntityFramework.resources.dll
