@@ -105,8 +105,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\IndexController.cs" />
-    <Compile Include="Controllers\novelController.cs" />
-    <Compile Include="Controllers\ProgromController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -116,7 +114,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Content Include="App_Data\try.sdf" />
     <Content Include="App_Themes\ShowBlueStyle\index.css" />
     <Content Include="Content\bootstrap\css\bootstrap-theme.css" />
     <Content Include="Content\bootstrap\css\bootstrap-theme.min.css" />
@@ -125,19 +122,11 @@
     <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\bootstrap\js\bootstrap.js" />
     <Content Include="Content\bootstrap\js\bootstrap.min.js" />
-    <Content Include="Content\css\cssdonghua.css" />
     <Content Include="Content\css\jquery.fullPage.css" />
     <Content Include="Content\img\BuildUsed\background1.jpg" />
-    <Content Include="Content\img\BuildUsed\background4.jpg" />
     <Content Include="Content\img\BuildUsed\code1.png" />
     <Content Include="Content\img\BuildUsed\dia1.png" />
-    <Content Include="Content\img\BuildUsed\fzgj.png" />
     <Content Include="Content\img\BuildUsed\logo.png" />
-    <Content Include="Content\img\BuildUsed\mfz1.png" />
-    <Content Include="Content\img\BuildUsed\mfz2.png" />
-    <Content Include="Content\img\BuildUsed\mfz3.png" />
-    <Content Include="Content\img\BuildUsed\pngbfm.png" />
-    <Content Include="Content\img\BuildUsed\pov.png" />
     <Content Include="Content\img\BuildUsed\standardMagicarray1.png" />
     <Content Include="Content\js\jquery-ui.min.js" />
     <Content Include="Content\js\jquery.fullPage.min.js" />
@@ -150,9 +139,7 @@
     <Content Include="Content\vegas\jquery.vegas.css" />
     <Content Include="Content\vegas\jquery.vegas.js" />
     <Content Include="Global.asax" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -164,6 +151,7 @@
   <ItemGroup>
     <Folder Include="App_Browsers\" />
     <Folder Include="App_Code\" />
+    <Folder Include="App_Data\" />
     <Folder Include="App_GlobalResources\" />
     <Folder Include="App_LocalResources\" />
     <Folder Include="Models\" />
@@ -191,8 +179,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\Onetry.pubxml" />
-    <Content Include="Views\Program\Index.cshtml" />
-    <Content Include="Views\novel\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
