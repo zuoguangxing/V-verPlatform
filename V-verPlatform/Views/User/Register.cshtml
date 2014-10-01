@@ -1,9 +1,12 @@
 ﻿@{
+    ViewBag.Title = "Register";
+}
+@{
     Layout = null;
 }
-<link href="~/App_Themes/ShowBlueStyle/userLogin.css" rel="stylesheet" />
+<link href="~/App_Themes/ShowBlueStyle/userRegister.css" rel="stylesheet" />
    <head>
-      <title>Register</title>
+      <title>Login</title>
       <!-- 引入 Bootstrap -->
        <link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
@@ -16,7 +19,7 @@
    </head>
 <div class="MainDiv">
 <form role="form" method="post" runat="server" style="text-align:center;">
-    <h3 style="color:#a99eef;font-family:微软雅黑, 'Microsoft YaHei', sans-serif;">Login</h3>
+    <h3 style="color:#a99eef;font-family:微软雅黑, 'Microsoft YaHei', sans-serif;">Register</h3>
     <br />
      <div class="input-group">
          <span class="input-group-addon">ACT</span>
@@ -25,26 +28,29 @@
     <br/>
       <div class="input-group">
          <span class="input-group-addon">PWD</span>
-         <input id="pvd"  type="password" class="form-control" placeholder="your password">
+         <input id="pvd1"  type="password" class="form-control" placeholder="your password">
+      </div>
+   <br/>
+      <div class="input-group">
+         <span class="input-group-addon">PWD</span>
+         <input id="pvd2"  type="password" class="form-control" placeholder="your password Again">
+      </div>
+   <br/>
+          <div class="input-group">
+         <span class="input-group-addon">EML</span>
+         <input id="email"  type="email" class="form-control" placeholder="your e-mail">
+      </div>
+   <br/>
+         <div class="input-group">
+         <span class="input-group-addon">STC</span>
+         <input id="securityCode"  type="email" class="form-control" placeholder="SecurityCode,You can get it from zgx">
       </div>
    <br/>
     <input class="btn btn-default" type="submit" value="Submit">
 </form>
-    <div style="text-align:center;">
-    <h4 style="color:#a99eef;font-family:微软雅黑, 'Microsoft YaHei', sans-serif;">If you don't have a account,you can register.</h4>
-   <button type="button" class="btn btn-default" onclick="open_win()" >
-      Register
-   </button>
-    </div>
     </div>
 <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
 <script src="~/Content/js/jquery.min.js"></script>
 <!-- 包括所有已编译的插件 -->
 <script src="~/Content/bootstrap/js/bootstrap.min.js"></script>
-<script>
-function open_win() 
-{
-window.open("Register");
-}
-</script>
-@RenderPage("~/Views/Shared/footer.cshtml")
+ @RenderPage("~/Views/Shared/footer.cshtml")

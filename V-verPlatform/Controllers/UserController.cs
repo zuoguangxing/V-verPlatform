@@ -11,6 +11,7 @@ namespace V_verPlatform.Controllers
     {
         //
         // GET: /User/
+        [VverAuthorize]
         public ActionResult Index()
         {
             
@@ -19,6 +20,10 @@ namespace V_verPlatform.Controllers
         public ActionResult Login()
         {
             
+            return View();
+        }
+        public ActionResult Register()
+        {
             return View();
         }
         //public ActionResult Verification ()
