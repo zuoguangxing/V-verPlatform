@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace V_verPlatform.Models.DB
 {
@@ -21,12 +23,71 @@ namespace V_verPlatform.Models.DB
             return bs.SaveChanges();
         }
         public List<Models.DB.userInfo> goList()
-        { 
-            return (from d in bs.userInfo where true select d).ToList<Models.DB.userInfo>();
+        {
+            List<Models.DB.userInfo> list = new List<userInfo>();
+            DataSet wangji = SqlHelper.ExecuteDataset(UserService.conStr, CommandType.Text, "SELECT * FROM UserNP");
+            DataTable table = wangji.Tables[0];
+            DataRowCollection rows = table.Rows;
+            foreach (DataRow row in rows)
+            {
+                list.Add(new userInfo()
+                {
+                    ID=(int)row["ID"],
+                    Name=(string)row["Name"],
+                    pw=(string)row["Password"],
+                    power=(byte)row["power"]
+                }
+                    );
+            }
+            //DataRow row = rows[0];
+            //return (String)row["Name"];
+            return list;
         }
+        #region 返回单一账号信息
+        /// <summary>
+        /// 返回一个人的账号信息通过ID，如果没有这个人则返回NULL
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <returns></returns>
         public userInfo goUserinfo(int ID)
         {
-            return (from d in bs.userInfo where d.ID == ID select d).ToList<userInfo>()[0];
+            SqlDataReader sqdr = SqlHelper.ExecuteReader(UserService.conStr, CommandType.Text, "SELECT * FROM UserNP WHERE ID="+ID.ToString());
+            if (sqdr.Read())
+            {
+                return new userInfo()
+                {
+                    ID = (int)sqdr["ID"],
+                    Name = (string)sqdr["Name"],
+                    pw = (string)sqdr["Password"],
+                    power = (byte)sqdr["power"]
+                };
+            }
+            else { return null; }
         }
+        /// <summary>
+        /// 返回一个人的账号信息通过NAME和密码，如果没有这个人则返回NULL
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="Password"></param>
+        /// <returns></returns>
+        public userInfo goUserinfo(String name, String Password)
+        {
+            SqlDataReader sqdr = SqlHelper.ExecuteReader(UserService.conStr, CommandType.Text, "SELECT * FROM UserNP WHERE Name='" + name+"' and Password='"+Password+"'");
+            if (sqdr.Read())
+            {
+                return new userInfo()
+                {
+                    ID = (int)sqdr["ID"],
+                    Name = (string)sqdr["Name"],
+                    pw = (string)sqdr["Password"],
+                    power = (byte)sqdr["power"]
+                };
+            }
+            else { return null; }
+        }
+        #endregion
+        #region
+
+        #endregion
     }
 }

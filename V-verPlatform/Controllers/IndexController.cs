@@ -19,11 +19,12 @@ namespace V_verPlatform.Controllers
         }
         public String test()
         {
-            DataSet wangji = SqlHelper.ExecuteDataset(UserService.conStr, CommandType.Text, "SELECT * FROM UserNP");
-            DataTable table =wangji.Tables[0];
-            DataRowCollection rows = table.Rows;
-            DataRow row =rows[0];
-            return (String)row["Name"];
+            //DataSet wangji = SqlHelper.ExecuteDataset(UserService.conStr, CommandType.Text, "SELECT * FROM UserNP");
+            //DataTable table =wangji.Tables[0];
+            //DataRowCollection rows = table.Rows;
+            //DataRow row =rows[0];
+            //return (String)row["Name"];
+            return userManger.verification("wangji", "1180").ToString();
         }
     }
 }
