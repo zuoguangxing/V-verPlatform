@@ -38,3 +38,7 @@ E:\github\V-verPlatform\V-verPlatform\bin\zh-Hans\System.Web.WebPages.Deployment
 E:\github\V-verPlatform\V-verPlatform\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
 E:\github\V-verPlatform\V-verPlatform\obj\Release\V-verPlatform.dll
 E:\github\V-verPlatform\V-verPlatform\obj\Release\V-verPlatform.pdb
+E:\github\V-verPlatform\V-verPlatform\bin\EntityFramework.dll
+E:\github\V-verPlatform\V-verPlatform\bin\EntityFramework.xml
+E:\github\V-verPlatform\V-verPlatform\bin\zh-Hans\EntityFramework.resources.dll
+E:\github\V-verPlatform\V-verPlatform\obj\Release\V-verPlatform.csprojResolveAssemblyReference.cache

@@ -118,6 +118,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DB\SQLHelper.cs" />
     <Compile Include="Models\DB\userDbModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -236,6 +237,8 @@
       <DependentUpon>userDbModel.edmx</DependentUpon>
       <LastGenOutput>userDbModel.cs</LastGenOutput>
     </Content>
+    <None Include="Properties\PublishProfiles\bengdi.pubxml" />
+    <None Include="Properties\PublishProfiles\hkPZ.pubxml" />
     <None Include="Properties\PublishProfiles\Onetry.pubxml" />
     <Content Include="Views\novel\Index.cshtml" />
     <Content Include="Views\Program\Index.cshtml" />

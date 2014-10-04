@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Register";
+}
+@{
+    Layout = null;
+}
+<link href="~/App_Themes/ShowBlueStyle/userRegister.css" rel="stylesheet" />
+   <head>
+      <title>Login</title>
+      <!-- 引入 Bootstrap -->
+       <link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+      <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+      <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+      <!--[if lt IE 9]>
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+   </head>
+<div class="MainDiv">
+<form role="form" method="post" runat="server" style="text-align:center;">
+    <h3 style="color:#a99eef;font-family:微软雅黑, 'Microsoft YaHei', sans-serif;">Register</h3>
+    <br />
+     <div class="input-group">
+         <span class="input-group-addon">ACT</span>
+         <input id="act" type="text" class="form-control" placeholder="your account">
+      </div>
+    <br/>
+      <div class="input-group">
+         <span class="input-group-addon">PWD</span>
+         <input id="pvd1"  type="password" class="form-control" placeholder="your password">
+      </div>
+   <br/>
+      <div class="input-group">
+         <span class="input-group-addon">PWD</span>
+         <input id="pvd2"  type="password" class="form-control" placeholder="your password Again">
+      </div>
+   <br/>
+          <div class="input-group">
+         <span class="input-group-addon">EML</span>
+         <input id="email"  type="email" class="form-control" placeholder="your e-mail">
+      </div>
+   <br/>
+         <div class="input-group">
+         <span class="input-group-addon">STC</span>
+         <input id="securityCode"  type="email" class="form-control" placeholder="SecurityCode,You can get it from zgx">
+      </div>
+   <br/>
+    <input class="btn btn-default" type="submit" value="Submit">
+</form>
+    </div>
+<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+<script src="~/Content/js/jquery.min.js"></script>
+<!-- 包括所有已编译的插件 -->
+<script src="~/Content/bootstrap/js/bootstrap.min.js"></script>
+ @RenderPage("~/Views/Shared/footer.cshtml")

@@ -12,5 +12,9 @@ namespace V_verPlatform.Models
         {
             return us.AddUser(user);
         }
+        public List<Models.DB.userInfo> goList()
+        {
+            return us.goList();
+        }
     }
 }

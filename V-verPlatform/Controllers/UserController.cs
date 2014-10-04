@@ -11,6 +11,7 @@ namespace V_verPlatform.Controllers
     {
         //
         // GET: /User/
+        
         [VverAuthorize]
         public ActionResult Index()
         {
