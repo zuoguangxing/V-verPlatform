@@ -16,12 +16,6 @@ namespace V_verPlatform.Models.DB
 
         //说好的EF+sdf不见了
         static public String conStr = ConfigurationManager.ConnectionStrings["vverDB"].ConnectionString;
-        userDBEntities bs = new userDBEntities();
-        public int AddUser(userInfo user)
-        {
-            bs.userInfo.Add(user);
-            return bs.SaveChanges();
-        }
         public List<Models.DB.userInfo> goList()
         {
             List<Models.DB.userInfo> list = new List<userInfo>();
@@ -86,8 +80,24 @@ namespace V_verPlatform.Models.DB
             else { return null; }
         }
         #endregion
-        #region
-
+        #region 写入注册相关
+        /// <summary>
+        /// 添加用户
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        public bool AddUser(userInfo user)
+        {
+            try
+            {
+                SqlHelper.ExecuteNonQuery(conStr, CommandType.Text, "INSERT INTO UserNP (Name,Password,power,email) VALUES('" + user.Name + "','" + user.pw + "'," + 1 +",'"+user.email+"')");
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
         #endregion
     }
 }

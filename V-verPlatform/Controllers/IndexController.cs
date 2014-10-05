@@ -24,7 +24,12 @@ namespace V_verPlatform.Controllers
             //DataRowCollection rows = table.Rows;
             //DataRow row =rows[0];
             //return (String)row["Name"];
-            return userManger.verification("wangji", "1180").ToString();
+            return userManger.register(new userInfo()
+            {
+                pw = "787",
+                Name = "99",
+                email="lalalala"
+            }).ToString();
         }
     }
 }
