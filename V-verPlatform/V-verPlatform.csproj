@@ -152,6 +152,7 @@
     <Content Include="Content\img\BuildUsed\code1.png" />
     <Content Include="Content\img\BuildUsed\dia1.png" />
     <Content Include="Content\img\BuildUsed\fzgj.png" />
+    <Content Include="Content\img\BuildUsed\litter_logo.png" />
     <Content Include="Content\img\BuildUsed\logo.png" />
     <Content Include="Content\img\BuildUsed\mfz1.png" />
     <Content Include="Content\img\BuildUsed\mfz2.png" />
@@ -175,6 +176,7 @@
     <Content Include="Content\vegas\jquery.vegas.js" />
     <Content Include="Global.asax" />
     <Content Include="somefile\UserNP.sql" />
+    <Content Include="Content\css\Loading.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -215,6 +217,8 @@
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\User\Login.cshtml" />
     <Content Include="Views\User\Register.cshtml" />
+    <Content Include="Views\Shared\Loading.cshtml" />
+    <Content Include="Views\Index\Test.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

@@ -1,33 +1,13 @@
 ﻿@{
     ViewBag.Title = "Index";
 }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
     <title>V-ver</title>
 </head>
 <script src="~/Content/js/jquery.min.js"></script>
 <script src="~/Content/js/jquery-ui.min.js"></script>
-<div class="yujiazai" style="overflow:hidden; width:100%;height:100%; background-color:#000; z-index:100;">
-    <div style="position:absolute; width:100%;text-align:center; margin-top:20%;">
-    <div class="circle"></div>
-    <div class="circle1"></div>
-    </div>
-    <div style="bottom:20%; text-align:center; width:100%; font-weight:bold; position:absolute; color: #FFF;font-family:微软雅黑, 'Microsoft YaHei', sans-serif;" > <p>v-ver platform</p><p>Loading。。。。。。 </p>
-<p>The site was founded in American</p> 
-    </div>
-</div>
-<script>
-    $(window).load(function () {
-        $(".yujiazai").animate({
-            height: '0%',
-        opacity: '0',
-        }, 2000);
-        if ($.browser.msie)
-        {
-            $(".yujiazai").hide(20);
-        }
-        $(".MainDiv").show();
-    });
-</script>
+@RenderPage("~/Views/Shared/Loading.cshtml")
 <script> 
     function ycLogoPng() {
         $(".logo").animate({
@@ -135,7 +115,7 @@
     <div class="div1">
     <a href ="program"><img id="mgpng1" style="border:none;" src="~/Content/img/BuildUsed/mfz1.png" /></a>
     <a href ="novel"><img id="mgpng2" style="border:none;" src="~/Content/img/BuildUsed/mfz2.png" /></a>
-    <a href ="user"><img id="mgpng3" src="~/Content/img/BuildUsed/mfz3.png" /></a>
+    <a href ="user"><img id="mgpng3" style="border:none;" src="~/Content/img/BuildUsed/mfz3.png" /></a>
     </div>
 </div>
 

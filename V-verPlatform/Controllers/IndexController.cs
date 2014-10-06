@@ -12,24 +12,15 @@ namespace V_verPlatform.Controllers
     {
         //
         // GET: /Index/
-        public static UserManager userManger = new UserManager();
         public ActionResult Index()
         {
+            ViewBag.LoadingMessage = "The Website is founded in HongKong";
             return View();
         }
-        public String test()
+        public ActionResult Test()
         {
-            //DataSet wangji = SqlHelper.ExecuteDataset(UserService.conStr, CommandType.Text, "SELECT * FROM UserNP");
-            //DataTable table =wangji.Tables[0];
-            //DataRowCollection rows = table.Rows;
-            //DataRow row =rows[0];
-            //return (String)row["Name"];
-            return userManger.register(new userInfo()
-            {
-                pw = "787",
-                Name = "99",
-                email="lalalala"
-            }).ToString();
+            
+            return View();
         }
     }
 }

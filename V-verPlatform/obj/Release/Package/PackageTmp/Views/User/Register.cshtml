@@ -18,39 +18,61 @@
       <![endif]-->
    </head>
 <div class="MainDiv">
-<form role="form" method="post" runat="server" style="text-align:center;">
+<form id="form1" role="form" method="post" action="Register" runat="server" style="text-align:center;" onsubmit="BeginRegister()">
     <h3 style="color:#a99eef;font-family:微软雅黑, 'Microsoft YaHei', sans-serif;">Register</h3>
     <br />
      <div class="input-group">
          <span class="input-group-addon">ACT</span>
-         <input id="act" type="text" class="form-control" placeholder="your account">
+         <input id="act" name="name" type="text" class="form-control" placeholder="your account" required="required" maxLength="10">
       </div>
     <br/>
       <div class="input-group">
          <span class="input-group-addon">PWD</span>
-         <input id="pvd1"  type="password" class="form-control" placeholder="your password">
+         <input id="pvd1" name="pw" onchange="checkPasswords()" type="password" class="form-control" placeholder="your password" required="required" maxLength="16">
       </div>
    <br/>
       <div class="input-group">
          <span class="input-group-addon">PWD</span>
-         <input id="pvd2"  type="password" class="form-control" placeholder="your password Again">
+         <input id="pvd2" onchange="checkPasswords()" type="password" class="form-control" placeholder="your password Again" required="required" maxLength="16">
       </div>
    <br/>
           <div class="input-group">
          <span class="input-group-addon">EML</span>
-         <input id="email"  type="email" class="form-control" placeholder="your e-mail">
+         <input id="email" name="email" type="email" class="form-control" placeholder="your e-mail" required="required" maxLength="24">
       </div>
    <br/>
          <div class="input-group">
          <span class="input-group-addon">STC</span>
-         <input id="securityCode"  type="email" class="form-control" placeholder="SecurityCode,You can get it from zgx">
+         <input id="securityCode" name="stc"  type="text" class="form-control" placeholder="SecurityCode,You can get it from zgx" required="required">
       </div>
    <br/>
+    <span style="color:#a99eef;font-family:微软雅黑, 'Microsoft YaHei'">@ViewBag.Message</span>
+    <br />
     <input class="btn btn-default" type="submit" value="Submit">
 </form>
     </div>
 <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
 <script src="~/Content/js/jquery.min.js"></script>
 <!-- 包括所有已编译的插件 -->
+<script src="~/Content/js/jqMD5.js"></script>
 <script src="~/Content/bootstrap/js/bootstrap.min.js"></script>
+<script>
+    //提交后验证
+    function BeginRegister() {
+        var md5pr = $.md5($('#pvd1').val());
+        $('#pvd1').val(md5pr);
+        }
+</script>
+<script>
+    function checkPasswords() {
+        var pass1 = document.getElementById("pvd1");
+        var pass2 = document.getElementById("pvd2");
+        if ((!pass1.value == "") && (!pass2.value == "")) {
+            if (pass1.value != pass2.value)
+                pass1.setCustomValidity("The two time you enter the password is not same");
+            else
+                pass1.setCustomValidity("");
+        }
+    }
+</script>
  @RenderPage("~/Views/Shared/footer.cshtml")
