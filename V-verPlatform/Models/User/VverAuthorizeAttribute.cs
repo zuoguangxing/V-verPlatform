@@ -14,6 +14,7 @@ namespace V_verPlatform.Models
     /// 是这么回事，本登陆系统使用Cookie+session双重认证模式，主要是在危险不高的情况下用cookie可以很轻松地登陆，如果在一些其他的环节就需要验证密码，大概就是这个样子
     /// Role 主要结合cookie
     /// User 结合session
+    /// 一些安全处理信息也会在这里
     /// </summary>
     public class VverAuthorizeAttribute:AuthorizeAttribute
     {

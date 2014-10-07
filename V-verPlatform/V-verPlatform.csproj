@@ -161,6 +161,7 @@
     <Content Include="Content\img\BuildUsed\pov.jpg" />
     <Content Include="Content\img\BuildUsed\pov.png" />
     <Content Include="Content\img\BuildUsed\standardMagicarray1.png" />
+    <Content Include="Content\img\BuildUsed\SWlogo.png" />
     <Content Include="Content\js\bootstrap-validation.min.js" />
     <Content Include="Content\js\jqBootstrapValidation.js" />
     <Content Include="Content\js\jqMD5.js" />
