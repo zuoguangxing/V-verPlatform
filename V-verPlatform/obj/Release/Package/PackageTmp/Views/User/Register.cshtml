@@ -1,12 +1,11 @@
 ﻿@{
     ViewBag.Title = "Register";
 }
-@{
-    Layout = null;
-}
+<script src="~/Content/js/jquery.min.js"></script>
+@RenderPage("~/Views/Shared/Loading.cshtml")
 <link href="~/App_Themes/ShowBlueStyle/userRegister.css" rel="stylesheet" />
    <head>
-      <title>Login</title>
+      <title>Register</title>
       <!-- 引入 Bootstrap -->
        <link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
@@ -51,8 +50,6 @@
     <input class="btn btn-default" type="submit" value="Submit">
 </form>
     </div>
-<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
-<script src="~/Content/js/jquery.min.js"></script>
 <!-- 包括所有已编译的插件 -->
 <script src="~/Content/js/jqMD5.js"></script>
 <script src="~/Content/bootstrap/js/bootstrap.min.js"></script>

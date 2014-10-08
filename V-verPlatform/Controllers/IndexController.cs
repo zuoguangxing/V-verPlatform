@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using V_verPlatform.Models.DB;
 using V_verPlatform.Models;
 using System.Data;
+using V_verPlatform.Models.Module;
 namespace V_verPlatform.Controllers
 {
     public class IndexController : Controller
@@ -14,12 +15,13 @@ namespace V_verPlatform.Controllers
         // GET: /Index/
         public ActionResult Index()
         {
+            ViewBag.kfzList = KfzBj.RetList(5);
             ViewBag.LoadingMessage = "The Website is founded in HongKong";
             return View();
         }
-        public ActionResult Test()
+        public ActionResult Test(String name,String img1,String img2)
         {
-            
+            SqlHelper.ExecuteNonQuery(UserService.conStr, CommandType.Text, "INSERT INTO Table_1 (Name,img,img2) VALUES('"+name + "','" + img1 +"','"+img2+"')");
             return View();
         }
     }

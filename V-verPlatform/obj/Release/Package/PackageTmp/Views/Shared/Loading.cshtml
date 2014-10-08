@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Loading";
+}
+<link href="~/Content/css/Loading.css" rel="stylesheet" />
+<div class="yujiazai" style="position:absolute; -webkit-box-sizing: initial; -moz-box-sizing:initial;box-sizing: initial; overflow:hidden; width:100%;height:100%; background-color:#000; z-index:100;">
+    <div style="position:absolute; width:100%;text-align:center; margin-top:20%;">
+    <div class="circle" style="-webkit-box-sizing: initial; -moz-box-sizing:initial; box-sizing:initial;"></div>
+    <div class="circle1" style="-webkit-box-sizing: initial; -moz-box-sizing:initial;"></div>
+    </div>
+    <div style="bottom:20%; text-align:center; width:100%; font-weight:bold; position:absolute; color: #FFF;font-family:微软雅黑, 'Microsoft YaHei', sans-serif;" > <p>v-ver platform</p><p>Loading。。。。。。 </p>
+<p>@ViewBag.LoadingMessage</p> 
+    </div>
+</div>
+<script>
+    $(window).load(function () {
+        $(".yujiazai").animate({
+            height: '0%',
+            opacity: '0',
+        }, 2000);
+        $(".yujiazai").hide(20);
+        $(".MainDiv").css("display","table");
+    });
+</script>

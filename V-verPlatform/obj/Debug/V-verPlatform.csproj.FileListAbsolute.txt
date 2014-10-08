@@ -83,3 +83,7 @@ E:\github\V-verPlatform\V-verPlatform\obj\Debug\V-verPlatform.pdb
 E:\github\V-verPlatform\V-verPlatform\bin\EntityFramework.dll
 E:\github\V-verPlatform\V-verPlatform\bin\EntityFramework.xml
 E:\github\V-verPlatform\V-verPlatform\bin\zh-Hans\EntityFramework.resources.dll
+E:\github\V-verPlatform\V-verPlatform\bin\AntiXssLibrary.dll
+E:\github\V-verPlatform\V-verPlatform\bin\HtmlSanitizationLibrary.dll
+E:\github\V-verPlatform\V-verPlatform\bin\AntiXssLibrary.xml
+E:\github\V-verPlatform\V-verPlatform\bin\HtmlSanitizationLibrary.xml

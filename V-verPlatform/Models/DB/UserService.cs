@@ -48,15 +48,19 @@ namespace V_verPlatform.Models.DB
             SqlDataReader sqdr = SqlHelper.ExecuteReader(UserService.conStr, CommandType.Text, "SELECT * FROM UserNP WHERE ID="+ID.ToString());
             if (sqdr.Read())
             {
-                return new userInfo()
+                userInfo us = new userInfo()
                 {
                     ID = (int)sqdr["ID"],
                     Name = (string)sqdr["Name"],
                     pw = (string)sqdr["Password"],
                     power = (byte)sqdr["power"]
                 };
+                sqdr.Close();
+                return us;
             }
-            else { return null; }
+            else {
+                sqdr.Close(); return null;
+            }
         }
         /// <summary>
         /// 返回一个人的账号信息通过NAME和密码，如果没有这个人则返回NULL
@@ -69,15 +73,20 @@ namespace V_verPlatform.Models.DB
             SqlDataReader sqdr = SqlHelper.ExecuteReader(UserService.conStr, CommandType.Text, "SELECT * FROM UserNP WHERE Name='" + name+"' and Password='"+Password+"'");
             if (sqdr.Read())
             {
-                return new userInfo()
+                userInfo us = new userInfo()
                 {
                     ID = (int)sqdr["ID"],
                     Name = (string)sqdr["Name"],
                     pw = (string)sqdr["Password"],
                     power = (byte)sqdr["power"]
                 };
+                sqdr.Close();
+                return us;
             }
-            else { return null; }
+            else
+            {
+                sqdr.Close(); return null;
+            }
         }
         #endregion
         #region 写入注册相关

@@ -1,5 +1,8 @@
-﻿@{
+﻿@using V_verPlatform.Models.Module
+@using System.Collections.Generic
+@{
     ViewBag.Title = "Index";
+    List < KfzBjDate > kfzbkList=(List<KfzBjDate>)ViewBag.kfzList;
 }
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
@@ -7,28 +10,7 @@
 </head>
 <script src="~/Content/js/jquery.min.js"></script>
 <script src="~/Content/js/jquery-ui.min.js"></script>
-<div class="yujiazai" style="overflow:hidden; width:100%;height:100%; background-color:#000; z-index:100;">
-    <div style="position:absolute; width:100%;text-align:center; margin-top:20%;">
-    <div class="circle"></div>
-    <div class="circle1"></div>
-    </div>
-    <div style="bottom:20%; text-align:center; width:100%; font-weight:bold; position:absolute; color: #FFF;font-family:微软雅黑, 'Microsoft YaHei', sans-serif;" > <p>v-ver platform</p><p>Loading。。。。。。 </p>
-<p>The site was founded in American</p> 
-    </div>
-</div>
-<script>
-    $(window).load(function () {
-        $(".yujiazai").animate({
-            height: '0%',
-        opacity: '0',
-        }, 2000);
-        if ($.browser.msie)
-        {
-            $(".yujiazai").hide(20);
-        }
-        $(".MainDiv").show();
-    });
-</script>
+@RenderPage("~/Views/Shared/Loading.cshtml")
 <script> 
     function ycLogoPng() {
         $(".logo").animate({
@@ -65,7 +47,6 @@
                 $("#fzgj").animate({
                     width: '0%',
                     opacity: '0',
-
                 });
             }
         });
@@ -125,18 +106,37 @@
 </script> 
 <link href="~/App_Themes/ShowBlueStyle/index.css" rel="stylesheet" />
 <link href="~/Content/css/cssdonghua.css" rel="stylesheet" />
+    
 <div class="MainDiv">
+   <img class="logo" src="~/Content/img/BuildUsed/logo.png" />
+   <img class="pngbfm" src="~/Content/img/BuildUsed/pngbfm.png" />
    <a href ="program"> <img class="bigpng" id="pov" src="~/Content/img/BuildUsed/pov.png" /></a>
    <a href ="novel"> <img class="bigpng" id="fzgj" src="~/Content/img/BuildUsed/fzgj.png" /></a>
     <img class="code1" src="~/Content/img/BuildUsed/code1.png" />
-    <img class="logo" src="~/Content/img/BuildUsed/logo.png" />
-    <img class="pngbfm" src="~/Content/img/BuildUsed/pngbfm.png" />
     <img class="magicarray bm1" src="~/Content/img/BuildUsed/standardMagicarray1.png" />
     <img class="magicarray bm2" src="~/Content/img/BuildUsed/standardMagicarray1.png" />
+           <div class="kfzDiv" style="color:#fff; font-family: 微软雅黑, 'Microsoft YaHei', sans-serif;">
+        <div style="margin:5%">
+            <span><img style="width:20%; height:auto;" src="~/Content/img/BuildUsed/SWlogo.png" /></span>
+            <span style="text-align:center; font-size:110%;" >&nbsp&nbsp&nbsp宿帏社开发笔记</span>
+        </div>
+@foreach (KfzBjDate x in kfzbkList)
+{
+     <div style="margin:5%;background-color:rgba(255, 255, 255, 0.20)">
+         <div margin:3%>
+             @x.datetime.Year 年 @x.datetime.Month 月 @x.datetime.Day 日
+         </div>
+         <div style="margin:3%">
+             <p>@x.note</p>
+             <p style="text-align:right">开发者：@x.kfzName</p>
+         </div>
+     </div>
+}
+    </div>
     <div class="div1">
     <a href ="program"><img id="mgpng1" style="border:none;" src="~/Content/img/BuildUsed/mfz1.png" /></a>
     <a href ="novel"><img id="mgpng2" style="border:none;" src="~/Content/img/BuildUsed/mfz2.png" /></a>
-    <a href ="user"><img id="mgpng3" src="~/Content/img/BuildUsed/mfz3.png" /></a>
+    <a href ="user"><img id="mgpng3" style="border:none;" src="~/Content/img/BuildUsed/mfz3.png" /></a>
     </div>
 </div>
 
