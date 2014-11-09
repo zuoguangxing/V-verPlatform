@@ -23,6 +23,7 @@ using System.Data;
 using System.Xml;
 using System.Data.SqlClient;
 using System.Collections;
+using System.Configuration;
 
 
 namespace V_verPlatform.Models.DB
@@ -34,6 +35,7 @@ namespace V_verPlatform.Models.DB
 	public sealed class SqlHelper
 	{
 		#region private utility methods & constructors
+        static public String conStr = ConfigurationManager.ConnectionStrings["vverDB"].ConnectionString;
 
 		//Since this class provides only static methods, make the default constructor private to prevent 
 		//instances from being created with "new SqlHelper()".
@@ -250,6 +252,7 @@ namespace V_verPlatform.Models.DB
 		/// <param name="commandText">the stored procedure name or T-SQL command</param>
 		/// <param name="commandParameters">an array of SqlParamters used to execute the command</param>
 		/// <returns>an int representing the number of rows affected by the command</returns>
+        /// 
 		public static int ExecuteNonQuery(SqlConnection connection, CommandType commandType, string commandText, params SqlParameter[] commandParameters)
 		{	
 			//create a command and prepare it for execution

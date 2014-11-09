@@ -1,0 +1,29 @@
+﻿body {
+    background-color:initial;
+}
+html {
+    background: url(../../Content/img/novel/novelBackground2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #3c817d;
+}
+.logotitle {
+    margin:2%;
+    margin-top:0%;
+    background-color:rgba(140, 207, 225, 0.30);
+}
+.logotitlepng {
+    width:100%;
+}
+.div1  {
+        margin:2%;
+    margin-top:0%;
+     background-color:rgba(140, 207, 225, 0.30);
+}
+.div2  {
+        margin:2%;
+    margin-top:0%;
+     background-color:rgba(140, 207, 225, 0.30);
+}

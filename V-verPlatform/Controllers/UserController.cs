@@ -26,13 +26,15 @@ namespace V_verPlatform.Controllers
         /// Login的重用，如果登陆失败会回到这个里面来，这个什么都没有的是默认的
         /// </summary>
         /// <returns></returns>
-        public ActionResult Login()
+        public ActionResult Login(String ReturnUrl=null)
         {
             if (loginInformationSigns == 1)
             {
                 ViewBag.Message = "Registration is successful, you can log in now!";
                 loginInformationSigns = 0;
+                return View();
             }
+            Session["ReturnUrl"] = ReturnUrl;
             return View();
         }
         /// <summary>
@@ -47,8 +49,16 @@ namespace V_verPlatform.Controllers
             int kk=userManger.verification(act, pvd);
             if (kk > 0)
             {
-                Session["ui"] = userManger.usinfo; 
-                return RedirectToAction("Index");
+                Session["ui"] = userManger.usinfo;
+                if (Session["ReturnUrl"] == null)
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    String sb=(String)Session["ReturnUrl"];
+                    return new RedirectResult(sb);
+                }
             }
             else
             {

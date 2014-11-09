@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "_NovelManager";
+}
+<script src="~/Content/js/jquery.min.js"></script>
+<script src="~/Content/ckeditor/ckeditor.js"></script>
+<script src="~/Content/bootstrap/js/bootstrap.min.js"></script>
+<link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<script type="text/javascript">
+    window.onload = function () { CKEDITOR.replace('novelText'); };
+</script>
+ <script>
+        $(document).ready(function () {
+            $("#novelSubmit").click(function () {
+                $.post("/novel/AddNovel",
+                {
+                    novelText: "asdasd",
+                    title: $("#title").val(),
+                    classify: $("#classify").val()
+                },
+                function (data, status) {
+                    alert(data);
+                    if (data==201) {
+                        $("#subaddnovel_resbdiv").text("登载完成~(≧▽≦)/~");
+                    }
+                    else
+                    {
+                        $("#subaddnovel_resbdiv").text("发生错误 ╮(╯﹏╰）╭");
+                    }
+                });
+            });
+        });
+
+        //        $.post("/novel/AddNovel",
+        //{
+        //    novelText: CKEDITOR.instances.novelText.getData(),
+        //    title: $("#title").val(),
+        //    classify: $("#classify").val()
+        //},
+        //function (data, status) {
+        //    alert("Data: " + data + "\nStatus: " + status);
+        //});
+</script>
+    <br />
+    <div class="input-group">
+         <span class="input-group-addon">title</span>
+         <input name="title" id="title" type="text" class="form-control" placeholder="title"  maxlength="20">
+      </div>
+    <br />
+        <div class="input-group">
+         <span class="input-group-addon">classify</span>
+         <input name="classify" id="classify" type="text" class="form-control" placeholder="classify" maxlength="20">
+      </div>
+   <div class="form-group">
+       <span class="input-group-addon">classify</span>
+      <select class="form-control">
+         <option value="青卷">青卷</option>
+          <option value="赤卷">赤卷</option>
+          <option value="紫卷">紫卷</option>
+          <option value="白卷">白卷</option>
+          <option value="杂卷">杂卷</option>
+      </select>
+     </div>
+    <br />
+<textarea name="novelText"  id="novelText"></textarea>
+<br />
+<Button class="btn btn-default" id="novelSubmit">提交</Button>
+    <div id="subaddnovel_resbdiv"></div>
+
