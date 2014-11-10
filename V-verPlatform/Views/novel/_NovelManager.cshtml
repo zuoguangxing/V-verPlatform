@@ -13,12 +13,11 @@
             $("#novelSubmit").click(function () {
                 $.post("/novel/AddNovel",
                 {
-                    novelText: "asdasd",
+                    novelText: CKEDITOR.instances.novelText.getData().toString(),
                     title: $("#title").val(),
                     classify: $("#classify").val()
                 },
                 function (data, status) {
-                    alert(data);
                     if (data==201) {
                         $("#subaddnovel_resbdiv").text("登载完成~(≧▽≦)/~");
                     }
@@ -29,16 +28,6 @@
                 });
             });
         });
-
-        //        $.post("/novel/AddNovel",
-        //{
-        //    novelText: CKEDITOR.instances.novelText.getData(),
-        //    title: $("#title").val(),
-        //    classify: $("#classify").val()
-        //},
-        //function (data, status) {
-        //    alert("Data: " + data + "\nStatus: " + status);
-        //});
 </script>
     <br />
     <div class="input-group">
@@ -46,13 +35,9 @@
          <input name="title" id="title" type="text" class="form-control" placeholder="title"  maxlength="20">
       </div>
     <br />
-        <div class="input-group">
-         <span class="input-group-addon">classify</span>
-         <input name="classify" id="classify" type="text" class="form-control" placeholder="classify" maxlength="20">
-      </div>
    <div class="form-group">
        <span class="input-group-addon">classify</span>
-      <select class="form-control">
+      <select class="form-control" id="classify">
          <option value="青卷">青卷</option>
           <option value="赤卷">赤卷</option>
           <option value="紫卷">紫卷</option>

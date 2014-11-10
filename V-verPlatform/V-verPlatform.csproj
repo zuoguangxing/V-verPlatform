@@ -532,7 +532,7 @@
     <Content Include="Content\js\jquery.shCircleLoader-min.js" />
     <Content Include="Content\js\jsRotation.js" />
     <Content Include="Content\js\Loadingjs.js" />
-    <Content Include="Content\js\rainyday.js" />
+    <Content Include="Content\js\rainyday.min.js" />
     <Content Include="Content\vegas\jquery.vegas.css" />
     <Content Include="Content\vegas\jquery.vegas.js" />
     <Content Include="Global.asax" />
