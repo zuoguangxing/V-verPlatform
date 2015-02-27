@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 using V_verPlatform.Models;
 using V_verPlatform.Models.DB;
+using V_verPlatform.Models.User;
 
 namespace V_verPlatform.Controllers.api
 {
@@ -31,10 +32,10 @@ namespace V_verPlatform.Controllers.api
         {
             if (dt.model==0)
             {
-            int kk = UserController.userManger.verification(dt.act, dt.pvd);
+            int kk = UserController.userManger.Verificatie(dt.act, dt.pvd);
             if (kk > 0)
             {
-                return CommonUse.toJson(UserController.userManger.usinfo);
+                return CommonUsed.toJson(UserController.userManger.usinfo);
             }
             else
             {
@@ -52,7 +53,7 @@ namespace V_verPlatform.Controllers.api
             {
                  if (dt.stc == "1180")
             {
-                int kk = UserController.userManger.register(new userInfo() { Name = dt.act, pw = dt.pvd, email = dt.email });
+                int kk = UserController.userManger.register(new UserInfo() { Name = dt.act, pw = dt.pvd, email = dt.email });
                 if (kk == 1)
                 {
                     return new HttpResponseMessage(HttpStatusCode.Created);

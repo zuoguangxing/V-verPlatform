@@ -17,12 +17,12 @@ namespace V_verPlatform.Models.Module
         static public List<KfzBjDate> RetList(int num)
         {
             List<KfzBjDate> list = new List<KfzBjDate>();
-            SqlDataReader sqdr = SqlHelper.ExecuteReader(conStr, CommandType.Text, "SELECT * FROM kfzBJ ORDER BY noteID DESC");
+            SqlDataReader sqdr = SqlHelper.ExecuteReader(conStr, CommandType.Text, "SELECT * FROM VkfzBjDate ORDER BY ID DESC");
             for (int i = 0; i < num; i++)
             {
                 if (sqdr.Read())
                 {
-                    list.Add(new KfzBjDate((int)sqdr["userID"],(String)sqdr["kfzName"],(String)sqdr["note"],(DateTime)sqdr["Date"],(int)sqdr["noteID"]));
+                    list.Add(new KfzBjDate((int)sqdr["userID"],(String)sqdr["kfzName"],(String)sqdr["note"],(DateTime)sqdr["Date"],(int)sqdr["ID"]));
                 }
                 else 
                 {
@@ -36,14 +36,14 @@ namespace V_verPlatform.Models.Module
         {
             try
             {
-    //                noteID int NOT NULL IDENTITY (1, 1),
+    //                ID int NOT NULL IDENTITY (1, 1),
     //note ntext NOT NULL,
     //kfzName nchar(20) NOT NULL,
     //userID int NOT NULL,
     //Date datetime NOT NULL
     //)  ON [PRIMARY]
     // TEXTIMAGE_ON [PRIMARY]
-                SqlHelper.ExecuteNonQuery(conStr, CommandType.Text, "INSERT INTO kfzBJ (kfzName,note,userID,Date) VALUES('" + kbd.kfzName + "','" + kbd.note + "'," + kbd.noteID + ",'" + kbd.datetime + "')");
+                SqlHelper.ExecuteNonQuery(conStr, CommandType.Text, "INSERT INTO VkfzBjDate (kfzName,note,userID,Date) VALUES('" + kbd.kfzName + "','" + kbd.note + "'," + kbd.ID + ",'" + kbd.datetime + "')");
                 return true;
             }
             catch
@@ -62,20 +62,20 @@ namespace V_verPlatform.Models.Module
             this.datetime = datetime;
             this.kfzName = kfzName;
             this.note = note;
-            this.userID = userID;
+            this.ID = userID;
         }
-        public KfzBjDate(int userID, String kfzName, String note, DateTime datetime,int noteID)
+        public KfzBjDate(int userID, String kfzName, String note, DateTime datetime,int ID)
         {
             this.datetime = datetime;
             this.kfzName = kfzName;
             this.note = note;
             this.userID = userID;
-            this.userID = noteID;
+            this.ID = ID;
         }
         public DateTime datetime;
         public String kfzName;
         public String note;
         public int userID;
-        public int noteID = 0;
+        public int ID = 0;
     }
 }

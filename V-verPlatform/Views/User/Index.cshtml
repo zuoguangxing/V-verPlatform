@@ -1,4 +1,5 @@
 ﻿@using V_verPlatform.Models;
+@using V_verPlatform.Models.User;
 @{
     ViewBag.Title = "Index";
 }
@@ -25,7 +26,7 @@
     </div>
     <div class="row" style="color:#fff;font-family:微软雅黑, 'Microsoft YaHei', sans-serif;">
         <div class="col-md-4"><h1>@VverAuthorizeAttribute.Name</h1></div>
-        <div class="col-md-6" ><h2> power is @VverAuthorizeAttribute.Power</h2></div>
+        <div class="col-md-6" ><h2> power is @VverAuthorizeAttribute.power</h2></div>
         <div class="col-md-2" >Logout</div>
     </div>
     <div class="row">
@@ -36,7 +37,7 @@
         <div class="col-md-8" ></div>
     </div>
     <div>
-       @if (VverAuthorizeAttribute.Power > 8)
+       @if (VverAuthorizeAttribute.power > 8)
        {
            <a href="/novel/manager">风轨管理后台</a>
        }

@@ -6,31 +6,61 @@ using System.Web.Mvc;
 using System.Web.Security;
 using System.Web.SessionState;
 using V_verPlatform.Models.DB;
-namespace V_verPlatform.Models
+namespace V_verPlatform.Models.User
 {
     public class UserManager:IRequiresSessionState
     {
        // http://blog.csdn.net/byondocean/article/details/7164117
+        public enum TypesOfIdentity
+        {
+            Guest,
+            User,
+            PowerManager,
+            Admin
+        }
         /// <summary>
         /// 根据power分级权限
         /// </summary>
         /// <param name="power"></param>
         /// <returns></returns>
-        static public String Classification ( int power)
+        static public TypesOfIdentity Classification(int power)
         {
             if(power<3)
             {
-                return "Guest";
+                return TypesOfIdentity.Guest;
             }
             else if(power <=6)
             {
-                return "User";
+                return TypesOfIdentity.User;
             }
             else if(power <=9)
             {
+                return TypesOfIdentity.PowerManager;
+            }
+            else if (power == 10)
+            {
+                return TypesOfIdentity.Admin;
+            }
+            else
+            {
+                return TypesOfIdentity.Guest;
+            }
+        }
+        static public String ClassificationToString(int power)
+        {
+            if (power < 3)
+            {
+                return "Guest";
+            }
+            else if (power <= 6)
+            {
+                return "User";
+            }
+            else if (power <= 9)
+            {
                 return "PowerManager";
             }
-            else if(power==10)
+            else if (power == 10)
             {
                 return "Admin";
             }
@@ -40,8 +70,8 @@ namespace V_verPlatform.Models
             }
         }
         UserService us=new UserService();
-        public userInfo usinfo;
-        public List<Models.DB.userInfo> goList()
+        public UserInfo usinfo;
+        public List<UserInfo> goList()
         {
             return us.goList();
         }
@@ -51,9 +81,9 @@ namespace V_verPlatform.Models
         /// <param name="name"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        public int verification(String name, String password)
+        public int Verificatie(String name, String password)
         {
-            usinfo = us.goUserinfo(name, password);
+            usinfo = us.GetUserInfo(name, password);
             try
             {
                 if (usinfo == null)
@@ -79,7 +109,7 @@ namespace V_verPlatform.Models
         /// </summary>
         /// <param name="usin"></param>
         /// <returns></returns>
-        public int register(userInfo usin)
+        public int register(UserInfo usin)
         {
             if (us.AddUser(usin))
             {

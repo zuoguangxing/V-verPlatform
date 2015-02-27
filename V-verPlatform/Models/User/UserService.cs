@@ -5,8 +5,8 @@ using System.Web;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-
-namespace V_verPlatform.Models.DB
+using V_verPlatform.Models.DB;
+namespace V_verPlatform.Models.User
 {
     /// <summary>
     /// 用户服务类
@@ -16,15 +16,15 @@ namespace V_verPlatform.Models.DB
 
         //说好的EF+sdf不见了
         static public String conStr = ConfigurationManager.ConnectionStrings["vverDB"].ConnectionString;
-        public List<Models.DB.userInfo> goList()
+        public List<UserInfo> goList()
         {
-            List<Models.DB.userInfo> list = new List<userInfo>();
+            List<UserInfo> list = new List<UserInfo>();
             DataSet wangji = SqlHelper.ExecuteDataset(UserService.conStr, CommandType.Text, "SELECT * FROM UserNP");
             DataTable table = wangji.Tables[0];
             DataRowCollection rows = table.Rows;
             foreach (DataRow row in rows)
             {
-                list.Add(new userInfo()
+                list.Add(new UserInfo()
                 {
                     ID=(int)row["ID"],
                     Name=(string)row["Name"],
@@ -43,12 +43,12 @@ namespace V_verPlatform.Models.DB
         /// </summary>
         /// <param name="ID"></param>
         /// <returns></returns>
-        public userInfo goUserinfo(int ID)
+        public UserInfo goUserInfo(int ID)
         {
-            SqlDataReader sqdr = SqlHelper.ExecuteReader(UserService.conStr, CommandType.Text, "SELECT * FROM UserNP WHERE ID="+ID.ToString());
+            SqlDataReader sqdr = SqlHelper.ExecuteReader(UserService.conStr, CommandType.Text, "SELECT * FROM VUserNP WHERE ID="+ID.ToString());
             if (sqdr.Read())
             {
-                userInfo us = new userInfo()
+                UserInfo us = new UserInfo()
                 {
                     ID = (int)sqdr["ID"],
                     Name = (string)sqdr["Name"],
@@ -68,18 +68,12 @@ namespace V_verPlatform.Models.DB
         /// <param name="name"></param>
         /// <param name="Password"></param>
         /// <returns></returns>
-        public userInfo goUserinfo(String name, String Password)
+        public UserInfo GetUserInfo(String name, String Password)
         {
-            SqlDataReader sqdr = SqlHelper.ExecuteReader(UserService.conStr, CommandType.Text, "SELECT * FROM UserNP WHERE Name='" + name+"' and Password='"+Password+"'");
+            SqlDataReader sqdr = SqlHelper.ExecuteReader(UserService.conStr, CommandType.Text, "SELECT * FROM VUserNP WHERE Name='" + name+"' and pw='"+Password+"'");
             if (sqdr.Read())
             {
-                userInfo us = new userInfo()
-                {
-                    ID = (int)sqdr["ID"],
-                    Name = (string)sqdr["Name"],
-                    pw = (string)sqdr["Password"],
-                    power = (byte)sqdr["power"]
-                };
+                UserInfo us = ZGXSQLHelper.SqlDataReaderToSolidmodel<UserInfo>(sqdr);
                 sqdr.Close();
                 return us;
             }
@@ -95,11 +89,11 @@ namespace V_verPlatform.Models.DB
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        public bool AddUser(userInfo user)
+        public bool AddUser(UserInfo user)
         {
             try
             {
-                SqlHelper.ExecuteNonQuery(conStr, CommandType.Text, "INSERT INTO UserNP (Name,Password,power,email) VALUES('" + user.Name + "','" + user.pw + "'," + 1 +",'"+user.email+"')");
+                SqlHelper.ExecuteNonQuery(conStr, CommandType.Text, "INSERT INTO VUserNP (Name,pw,power,email,status,regdate) VALUES('" + user.Name + "','" + user.pw + "'," + 1 +",'"+user.email+"',"+0+",'"+DateTime.Now+"')");
                 return true;
             }
             catch

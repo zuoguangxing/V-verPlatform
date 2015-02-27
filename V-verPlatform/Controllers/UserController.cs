@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using V_verPlatform.Models;
+using V_verPlatform.Models.User;
 using V_verPlatform.Models.DB;
-
+using V_verPlatform.Models.CommonUse;
 namespace V_verPlatform.Controllers
 {
     public class UserController : Controller
@@ -46,10 +46,16 @@ namespace V_verPlatform.Controllers
         [HttpPost]
         public ActionResult Login(String act,String pvd)
         {
-            int kk=userManger.verification(act, pvd);
+            int kk=userManger.Verificatie(act, pvd);
             if (kk > 0)
             {
                 Session["ui"] = userManger.usinfo;
+                //验证e-mail是否验证
+                if (userManger.usinfo.status != 0)
+                {
+                    ViewBag.Message = "Your account is in the abnormal state";
+                    return View();
+                }
                 if (Session["ReturnUrl"] == null)
                 {
                     return RedirectToAction("Index");
@@ -95,10 +101,12 @@ namespace V_verPlatform.Controllers
         {
             if (stc == "1180")
             {
-                int kk = userManger.register(new userInfo() { Name = name, pw = pw, email = email });
+                UserInfo usus =  new UserInfo() { Name = name, pw = pw, email = email };
+                int kk = userManger.register(usus);
                 if (kk == 1)
                 {
                     loginInformationSigns = 1;
+                    EmailServer.SendRegisterMail(usus);
                     return RedirectToAction("Login");
                 }
                 else

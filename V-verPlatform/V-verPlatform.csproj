@@ -129,11 +129,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\CommonUse.cs" />
+    <Compile Include="Models\CommonUsed.cs" />
+    <Compile Include="Models\CommonUse\CommonData.cs" />
+    <Compile Include="Models\CommonUse\EmailServer.cs" />
+    <Compile Include="Models\CommonUse\XmlCommon.cs" />
     <Compile Include="Models\DB\SQLHelper.cs" />
+    <Compile Include="Models\DB\ZGXSQLHelper.cs" />
     <Compile Include="Models\Novel\NovelManager.cs" />
     <Compile Include="Models\Novel\NovelService.cs" />
-    <Compile Include="Models\User\userInfo.cs" />
+    <Compile Include="Models\User\UserInfo.cs" />
     <Compile Include="Models\User\UserService.cs" />
     <Compile Include="Models\Module\KfzBj.cs" />
     <Compile Include="Models\Novel\NovelData.cs" />
@@ -149,6 +153,8 @@
     <Content Include="App_Themes\ShowBlueStyle\novel.css" />
     <Content Include="App_Themes\ShowBlueStyle\userLogin.css" />
     <Content Include="App_Themes\ShowBlueStyle\userRegister.css" />
+    <Content Include="Config\ConmmonString.xml" />
+    <Content Include="Config\EmailConfig.xml" />
     <Content Include="Content\bootstrap\css\bootstrap-theme.css" />
     <Content Include="Content\bootstrap\css\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap\css\bootstrap-theme.min.css" />
@@ -537,9 +543,12 @@
     <Content Include="Content\vegas\jquery.vegas.js" />
     <Content Include="Global.asax" />
     <Content Include="somefile\kfzBJ.sql" />
-    <Content Include="somefile\novel.sql" />
+    <Content Include="somefile\RegisteredEmail.html" />
+    <Content Include="somefile\Vnovel.sql" />
     <Content Include="somefile\UserNP.sql" />
     <Content Include="Content\css\Loading.css" />
+    <Content Include="somefile\VKfzBjDate.sql" />
+    <Content Include="somefile\VUserNP.sql" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

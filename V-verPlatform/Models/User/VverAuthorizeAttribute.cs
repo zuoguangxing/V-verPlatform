@@ -7,7 +7,7 @@ using System.Web.Security;
 using V_verPlatform.Controllers;
 using V_verPlatform.Models.DB;
 
-namespace V_verPlatform.Models
+namespace V_verPlatform.Models.User
 {
     /// <summary>
     /// 奇葩验证机制
@@ -26,7 +26,7 @@ namespace V_verPlatform.Models
 //      <forms loginUrl="~/" timeout="2880" />
 //    </authentication>
 //所有，AuthorizeCore==false 时，会跳转到 web.config 中定义的  loginUrl="~/"
-        static public int Power;
+        static public int power;
         static public int ID;
         static public String Name;
         static public String users;
@@ -54,8 +54,8 @@ namespace V_verPlatform.Models
                     //和存入时的分隔符有关系，此处存入时的分隔符为逗号   
                     List<String> userDate = authTicket.UserData.Split(new[] { ',' }).ToList();
                     ID = Convert.ToInt32(userDate[0]);
-                    Power = Convert.ToInt32(userDate[1]);
-                    users = UserManager.Classification(Power);
+                    power = Convert.ToInt32(userDate[1]);
+                    users = UserManager.ClassificationToString(power);
                     Name = authTicket.Name;
                     List<String> roles = Roles.Split(new[] { ',' }).ToList();
                     List<String> okusers = Users.Split(new[] { ',' }).ToList();

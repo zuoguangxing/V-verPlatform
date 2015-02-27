@@ -7,6 +7,7 @@ using V_verPlatform.Models.DB;
 using V_verPlatform.Models;
 using System.Data;
 using V_verPlatform.Models.Module;
+using V_verPlatform.Models.User;
 namespace V_verPlatform.Controllers
 {
     public class IndexController : Controller

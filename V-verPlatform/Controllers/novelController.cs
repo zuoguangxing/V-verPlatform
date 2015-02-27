@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 using V_verPlatform.Models;
 using V_verPlatform.Models.Novel;
+using V_verPlatform.Models.User;
 using Webdiyer.WebControls.Mvc;
 
 namespace V_verPlatform.Controllers
