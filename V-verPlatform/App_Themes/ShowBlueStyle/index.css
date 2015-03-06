@@ -119,6 +119,10 @@ opacity: 0;
     #fzgj {
         margin-top:5%;
     }
+    .region {
+        font-size:30px;
+        bottom:0px;
+    }
 }
 @media only screen and (max-width: 900px) {
     .kfzDiv {
@@ -173,5 +177,9 @@ opacity: 1;
     }
     body {
         overflow-y: auto;
+    }
+    .region {
+        top:0px;
+        font-size:15px;
     }
 }

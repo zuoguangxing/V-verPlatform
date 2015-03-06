@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/bootstraplayout.cshtml";
+}
+<head>
+    <title>V-verAdmin</title>
+</head>
+<div class="row" style="color:white">
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-8" style="text-align:center; background-color :rgba(53, 209, 230, 0.50); margin:5%">
+        <div class="row" style="font-size:23px;">
+            <h2>V-ver最终维护核心</h2>
+            <h2>V-ver The final maintenance of core</h2>
+        </div>
+        <div class="row" style="font-size:20px;">
+            <br />
+            请输入终极密码<br />
+            Please input the ultimate password<br />
+            <br />
+        </div>
+        <br />
+        <form role="form" method="post" action="Admin" runat="server" style="text-align:center; margin:10%">
+            <div class="input-group">
+                <span class="input-group-addon">PWD</span>
+                <input name="pvd" id="pvd" type="password" class="form-control" placeholder="password" required="required" maxlength="16">
+            </div>
+            <br />
+            <input class="btn btn-default" type="submit" value="Submit">
+            <br />
+            @if (ViewBag.AdminVerification!=null)
+            {
+                if (!ViewBag.AdminVerification)
+                {
+                     <div>
+                         <h5>验证失败，请检查密码</h5>
+                         <h5>Validation failed, please check the password</h5>
+                         <br />
+                     </div>
+                }
+            }
+       </form>
+</div>
+    <div class="col-md-2">
+
+    </div>
+</div>

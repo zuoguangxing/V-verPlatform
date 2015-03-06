@@ -26,10 +26,10 @@ namespace V_verPlatform.Models.User
             {
                 list.Add(new UserInfo()
                 {
-                    ID=(int)row["ID"],
-                    Name=(string)row["Name"],
-                    pw=(string)row["Password"],
-                    power=(byte)row["power"]
+                    ID = (int)row["ID"],
+                    Name = (string)row["Name"],
+                    pw = (string)row["Password"],
+                    power = (byte)row["power"]
                 }
                     );
             }
@@ -45,7 +45,7 @@ namespace V_verPlatform.Models.User
         /// <returns></returns>
         public UserInfo goUserInfo(int ID)
         {
-            SqlDataReader sqdr = SqlHelper.ExecuteReader(UserService.conStr, CommandType.Text, "SELECT * FROM VUserNP WHERE ID="+ID.ToString());
+            SqlDataReader sqdr = SqlHelper.ExecuteReader(UserService.conStr, CommandType.Text, "SELECT * FROM VUserNP WHERE ID=" + ID.ToString());
             if (sqdr.Read())
             {
                 UserInfo us = new UserInfo()
@@ -58,7 +58,8 @@ namespace V_verPlatform.Models.User
                 sqdr.Close();
                 return us;
             }
-            else {
+            else
+            {
                 sqdr.Close(); return null;
             }
         }
@@ -70,7 +71,7 @@ namespace V_verPlatform.Models.User
         /// <returns></returns>
         public UserInfo GetUserInfo(String name, String Password)
         {
-            SqlDataReader sqdr = SqlHelper.ExecuteReader(UserService.conStr, CommandType.Text, "SELECT * FROM VUserNP WHERE Name='" + name+"' and pw='"+Password+"'");
+            SqlDataReader sqdr = SqlHelper.ExecuteReader(UserService.conStr, CommandType.Text, "SELECT * FROM VUserNP WHERE Name='" + name + "' and pw='" + Password + "'");
             if (sqdr.Read())
             {
                 UserInfo us = ZGXSQLHelper.SqlDataReaderToSolidmodel<UserInfo>(sqdr);
@@ -91,15 +92,16 @@ namespace V_verPlatform.Models.User
         /// <returns></returns>
         public bool AddUser(UserInfo user)
         {
-            try
-            {
-                SqlHelper.ExecuteNonQuery(conStr, CommandType.Text, "INSERT INTO VUserNP (Name,pw,power,email,status,regdate) VALUES('" + user.Name + "','" + user.pw + "'," + 1 +",'"+user.email+"',"+0+",'"+DateTime.Now+"')");
+            //try
+            //{
+                //SqlHelper.ExecuteNonQuery(conStr, CommandType.Text, "INSERT INTO VUserNP (Name,pw,power,email,status,regdate) VALUES('" + user.Name + "','" + user.pw + "'," + 1 + ",'" + user.email + "'," + 0 + ",'" + DateTime.Now + "')");
+            ZGXSQLHelper.SqlInsertData<UserInfo>(SqlHelper.conStr, "VUserNP", user, new List<string>() {"ID"});
                 return true;
-            }
-            catch
-            {
-                return false;
-            }
+            //}
+            //catch
+            //{
+            //    return false;
+            //}
         }
         #endregion
     }

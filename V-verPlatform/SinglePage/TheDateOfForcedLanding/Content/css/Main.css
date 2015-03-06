@@ -1,0 +1,59 @@
+﻿html {
+    width:100%;
+    height:100%;
+background: url(../img/background.jpg) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+background-color: #040114;
+}
+a {
+    color:white;
+}
+body {
+width: 100%;
+height: 100%;
+overflow: hidden;
+margin: 0px;
+font-family :'Microsoft YaHei';
+color :white;
+background :none;
+background-color:transparent;
+}
+.MainDiv {
+    height:100%;
+    width:100%;
+}
+.btnopacity5 {
+    filter:alpha(opacity=60); /*IE滤镜，透明度50%*/
+    -moz-opacity:0.6; /*Firefox私有，透明度50%*/
+    opacity:0.6;/*其他，透明度50%*/
+}
+.backgroundaudio {
+                filter:alpha(opacity=50); /*IE滤镜，透明度50%*/
+    -moz-opacity:0.5; /*Firefox私有，透明度50%*/
+    opacity:0.5;/*其他，透明度50%*/
+            width:80%;
+}
+    .vfooter {
+        width:80%;
+        margin-left:10%;
+        margin-right:10%;
+    }
+@media (min-width: 768px) {
+    .backgroundaudio {
+left: 11%;
+position: absolute;
+bottom: 10%;
+    }
+    .vfooter {
+        position:absolute;
+        bottom:0%;
+    }
+}
+@media (max-width: 767px) {
+    body {
+        overflow-y:initial;
+    }
+}

@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "AdminControl";
+    Layout = "~/Views/Shared/bootstraplayout.cshtml";
+}
+<div class="col-md-2"></div>
+<div class="col-md-8">
+    @if (ViewBag.AdminVerification)
+    {
+        <h2>AdminControl</h2>
+        <button class="btn btn-default" id="Initializedatabase">初始化数据库</button>
+        <script>
+            $(document).ready(function () {
+                $("#Initializedatabase").click(function () {
+                    $.post("/User/Admin",
+                    {
+                        pvd:@ViewBag.pvd,
+                        action: '1'
+                    },
+                    function (data, status) {
+                        alert (data.result);
+                        alert (status.StatusCode);
+                        if (data==201) {
+                            $("#result").text("执行成功~(≧▽≦)/~");
+                        }
+                        else
+                        {
+                            $("#result").text("发生错误 ╮(╯﹏╰）╭");
+                        }
+                    })
+                    ;
+                });
+            });
+        </script>
+        <div id="result"></div>
+    }
+    else
+    {
+        <h2 style="color:white"> 非法请求</h2>
+    }
+</div>
+<div class="col-md-2"></div>

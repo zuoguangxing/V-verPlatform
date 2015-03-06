@@ -12,7 +12,7 @@ using Webdiyer.WebControls.Mvc;
 
 namespace V_verPlatform.Controllers
 {
-    public class novelController : Controller
+    public class NovelController : Controller
     {
         //
         // GET: /novel/
@@ -28,7 +28,14 @@ namespace V_verPlatform.Controllers
             var model = lala.AsQueryable().ToPagedList(pageIndex, pageSize);
             if (Request.IsAjaxRequest())
                 return PartialView("_NovelList", model);
+            if (lala.Count < 1)
+            {
+                ViewBag.newNovel = new NovelData(DateTime.Now, "暂时没有数据", 1, "0", "没有数据");
+            }
+            else
+            {
             ViewBag.newNovel = NM.RetNovel(lala[0].ID);
+            }
             return View(model);
         }
         [VverAuthorize(Roles = "Admin,PowerManager",Users="On")]

@@ -16,9 +16,16 @@ namespace V_verPlatform.Controllers
         // GET: /Index/
         public ActionResult Index()
         {
-            ViewBag.kfzList = KfzBj.RetList(5);
-            ViewBag.LoadingMessage = "The Website is founded in HongKong";
-            return View();
+            try
+            {
+                ViewBag.kfzList = KfzBj.RetList(5);
+                ViewBag.LoadingMessage = "The Website is founded in HongKong";
+                return View();
+            }
+            catch (Exception e)
+            {
+                return RedirectToAction("Admin", "User");
+            }
         }
         public ActionResult Test(String name,String img1,String img2)
         {

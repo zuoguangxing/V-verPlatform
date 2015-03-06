@@ -1,0 +1,36 @@
+﻿@using V_verPlatform.Models.Novel
+@using Webdiyer.WebControls.Mvc
+@model PagedList<NovelomitData>
+<div >
+    <div class="row" style="margin:2%;">
+        <div class="col-sm-2">
+            @Html.DisplayNameFor(model => model.classify)
+        </div>
+        <div class="col-sm-2">
+            @Html.DisplayNameFor(model => model.userID)
+        </div >
+        <div class="col-sm-5">
+            @Html.DisplayNameFor(model => model.title)
+        </div>
+        <div class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Date)
+        </div>
+    </div>
+    @foreach (var item in Model) {
+        <div class="row" style="margin:2%;">
+            <div class="col-sm-2">
+                @Html.DisplayFor(modelItem => item.classify)
+            </div >
+            <div class="col-sm-2">
+                @Html.DisplayFor(modelItem => item.userID)
+            </div>
+            <div class="col-sm-5">
+                @Html.DisplayFor(modelItem => item.title)
+            </div>
+            <div class="col-sm-3">
+                @Html.DisplayFor(modelItem => item.Date)
+            </div>
+        </div>
+    }
+</div>
+<div style="text-align: center" class="row">@Ajax.Pager(Model,new PagerOptions{PageIndexParameterName = "pi",PageIndexBoxType = PageIndexBoxType.DropDownList,ShowGoButton = false},new MvcAjaxOptions{UpdateTargetId = "novellist"})</div>

@@ -1,5 +1,52 @@
-﻿@{
-    ViewBag.Title = "Index";
-}
-
-<h2>制作中</h2>
+﻿@using V_verPlatform.Models.Novel
+@using Webdiyer.WebControls.Mvc
+@model PagedList<NovelomitData>
+@{
+    NovelData newNovel = (NovelData)ViewBag.newNovel;
+        }
+<!DOCTYPE html>
+<html id="html">
+   <head>
+      <title>Novel</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- 引入 Bootstrap -->
+              <script src="~/Content/js/jquery.min.js"></script>
+       <script src="~/Content/bootstrap/js/bootstrap.min.js"></script>
+       <link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+          <link href="~/App_Themes/ShowBlueStyle/novel.css" rel="stylesheet" />
+      <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+      <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+      <!--[if lt IE 9]>
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+       <div class="container-fluid" style="color:#fff;font-family:微软雅黑, 'Microsoft YaHei', sans-serif;">
+           <div class="logotitle row">
+               <div class="col-sm-5" ><img class="logotitlepng" src="~/Content/img/novel/fglogo.png" /></div>
+               <div class="col-sm-7" ><h2></h2></div>
+               
+            </div>
+           <div class="row div1">
+               <div class="col-sm-9" >
+                <div class="row" style="margin:2%;">
+               <h2 >@newNovel.title</h2></div>
+                <div class="row" style="margin:2%;">
+                 @Html.Raw(@newNovel.text)</div>
+               </div>
+           <div class="col-sm-3" >
+               <div class="row"><h4>青卷</h4></div>
+               <div class="row"><h4>紫卷</h4></div>
+               <div class="row"><h4>赤卷</h4></div>
+               <div class="row"><h4>白卷</h4></div>
+               <div class="row"><h4>杂卷</h4></div>
+           </div>    
+           </div>
+          <div class="row div2" id="novellist" style=" color:#fff;font-family:微软雅黑, 'Microsoft YaHei', sans-serif;">
+                     @Html.Partial("_NovelList",Model)
+         </div>
+           @{Html.RegisterMvcPagerScriptResource();}
+        </div>
+   </body>
+</html>

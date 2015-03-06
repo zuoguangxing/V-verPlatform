@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>V-ver</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入 Bootstrap -->
+    <link href="Content/css/Loading.css" rel="stylesheet" />
+    <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+    <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+    <!--[if lt IE 9]>
+       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif] -->
+    <script src="Content/js/jquery.min.js"></script>
+    <link href="Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/css/Main.css" rel="stylesheet" />
+</head>
+<body >
+    <div class="yujiazai" style="position: absolute; box-sizing: initial; overflow: hidden; width: 100%; height: 100%; z-index: 100; background-color: rgb(0, 0, 0);">
+        <div style="position:absolute; width:100%;text-align:center; top:35%;">
+            <div class="circle" style="-webkit-box-sizing: initial; -moz-box-sizing:initial; box-sizing:initial;"></div>
+            <div class="circle1" style="-webkit-box-sizing: initial; -moz-box-sizing:initial;"></div>
+        </div>
+        <div style="bottom:20%; text-align:center; width:100%; font-weight:bold; position:absolute; color: #FFF;font-family:微软雅黑, 'Microsoft YaHei', sans-serif;">
+            <p>v-ver 世界树</p><p>Loading。。。。。。 </p>
+        </div>
+    </div>
+    <script>
+    $(window).load(function () {
+        $(".yujiazai").animate({
+            height: '0%',
+            opacity: '0',
+        }, 2000);
+        $(".yujiazai").hide(20);
+        $(".MainDiv").css("display", "table");
+    });
+    </script>
+
+    <canvas id="RainCanvas" style="height:100%; width:100%; position:absolute;left:0;top:0;z-index:-1;"></canvas>
+    <div class="MainDiv">
+        <div class="col-sm-7"></div>
+        <div class="col-sm-5" style="height:100%; text-align:center;">
+            <div class="row" style="width:100%; margin:0%;">
+                <img style="width:80%;margin:10%; margin-bottom:0%;" src="Content/img/pngtitle.png" />
+            </div>
+            <img src="Content/img/V-verlogo.png" />
+            <div class="row" style="margin:8%; margin-top:3%; margin-bottom:3%; width:84%; background-color:rgba(255, 255, 255, 0.20)">
+                <ul id=" mytab" class="nav nav-tabs">
+                <li class="active">
+                    <a href="#home" data-toggle="tab">
+                        进行式
+                    </a>
+                </li>
+                <li><a href="#worldtree" data-toggle="tab">V-ver 世界树</a></li>
+                <li class="dropdown">
+                    <a href="#" id="myTabDrop1" class="dropdown-toggle"
+                       data-toggle="dropdown">
+                        宿帷社
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+                        <li><a href="#aboutSite" tabindex="-1" data-toggle="tab">关于本站</a></li>
+                        <li><a href="#siteMap" tabindex="-1" data-toggle="tab">站点通道</a></li>
+                        <li><a href="#aboutzgx" tabindex="-1" data-toggle="tab">关于zgx</a></li>
+                    </ul>
+                </li>
+                </ul>
+                <div id="myTabContent" class="tab-content" style="margin:3%;">
+                    <div class="tab-pane fade in active" id="home">
+                        <h4 style="text-align:center">迫降之日</h4>
+                        <p>被世界树梦天追杀的风轨分队，飞船能源耗尽，迫降在离主队求救信号指向的准宇宙未知星系。</p>
+                        <p>在微弱的信号指引下寻找未知的命运。</p>
+                        <p>
+                            风轨分队：艾菲尔，祈飞薇，王林林，亚菲，亚卓
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="worldtree">
+                        <h4 style="text-align:center">无限延伸类树络世界</h4>
+                        <p>
+                            另称 世界树<br />
+                            在祈时代，由灵堂中心研究所，副所长立高维新发现并将其命名。<br />
+                            他在某次偶然观察各个元节点的位置，将其中时空数据进行五次元数转换。然后将其降维为三次元坐标，<br />
+                            呈现出了一个树的3d模型。<br />
+                            树的上层是包括梦天，中层包括灵域和准宇宙，下层为子雾的树形状。<br />
+                            在宸时代，也就是现在的时代，央灵区和天劫派仍然未对这个事物有很好的解释。<br />
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="aboutSite">
+                        <p>本站是关于V-ver项目的网站，使用Unity3d以及MVC架构的web组成的网游和小说发布网站。预计版本在2015年8月20日进行首次发布测试。</p>
+                        <p>敬请期待！</p>
+                    </div>
+                    <div class="tab-pane fade" style="text-align:center" id="siteMap">
+                        <button onclick="javascript: window.open('http://wiki.v-ver.com');" id="fat-btn" class="btn btnopacity5" style="margin:1%; width:60%;color:#595764;" data-loading-text="Loading..." type="button">
+                            wiki站
+                        </button>
+                        <button onclick="javascript: window.open('http://cn1.v-ver.com');" id="fat-btn" class="btn btnopacity5" style="margin:1%; width:60%;color:#595764;" data-loading-text="Loading..." type="button">
+                            V-verPlatform CN1
+                        </button>
+                        <button onclick="javascript: window.open('http://hk.v-ver.com');" id="fat-btn" class="btn btnopacity5" style="margin:1%; width:60%;color:#595764;" data-loading-text="Loading..." type="button">
+                            V-verPlatform HK
+                        </button>
+                        <button onclick="javascript: window.open('http://mail.v-ver.com');" id="fat-btn" class="btn btnopacity5" style="margin:1%; width:60%;color:#595764;" data-loading-text="Loading..." type="button">
+                            邮箱站
+                        </button>
+                        <button onclick="javascript: window.open('http://zgx.v-ver.com');" id="fat-btn" class="btn btnopacity5" style="margin:1%; width:60%;color:#595764;" data-loading-text="Loading..." type="button">
+                            个人简历
+                        </button>
+                    </div>
+                    <div class="tab-pane fade" id="aboutzgx">
+                        <p>
+                            左光星是一个可怜穷苦的码农，在宿帷社负责维护以及代码工作。<br />
+                            如果您对本项目有兴趣欢迎和我交流。<br />
+                            如果您有不错的工作推荐，可以联系我。<br />
+                            码农生命不息战斗不止。<br />
+                            邮箱wangji@v-ver.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <audio class="backgroundaudio" controls loop="loop" autoplay="autoplay">
+                <source src="http://storage.live.com/items/5A4D5FA67111A33%218176?bg.ogg" type="audio/ogg">
+                <source src="http://storage.live.com/items/5A4D5FA67111A33%218175?bg.mp3" type="audio/mpeg">
+            </audio>
+            <div class="modal-footer row vfooter" style="width: 80%;">
+                <p>
+                    Copyright © 2014 V-ver<br />
+                    冀ICP备14011093号
+                </p>
+            </div>
+        </div>
+        <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+        <!-- 包括所有已编译的插件 -->
+        <script src="Content/bootstrap/js/bootstrap.min.js"></script>
+    </div>
+    <script type="text/javascript">
+        $(function () 
+        {            
+            var canvas = $("#RainCanvas")[0];
+            var W = canvas.width, H = canvas.height, ctx, angle = 0, len = 20, count = 250;
+            ctx = canvas.getContext('2d');
+            console.log(W, H);
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.7)';
+            var run = setInterval(draw, 50);
+            function draw() {
+                ctx.clearRect(0, 0, W, H);
+                xiayus();
+            }            //画线
+            function xiayu(x, y, r) {
+                ctx.beginPath();
+                ctx.moveTo(x, y);
+                //console.log(y, len);
+                ctx.lineTo(x + angle, y + len); ctx.lineWidth = 0.1;
+                ctx.stroke();
+            } function xiayus()
+            {
+                for
+                    (var i = 1; i <= count; i++)
+                {
+                    xiayu
+                      (Math.random() * W, Math.random() * H, angle);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

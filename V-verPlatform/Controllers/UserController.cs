@@ -6,10 +6,13 @@ using System.Web.Mvc;
 using V_verPlatform.Models.User;
 using V_verPlatform.Models.DB;
 using V_verPlatform.Models.CommonUse;
+using System.Web.UI.WebControls;
+using System.Net;
 namespace V_verPlatform.Controllers
 {
     public class UserController : Controller
     {
+        static String AdminPvd = "1160";
         //
         // GET: /User/
         public static UserManager userManger = new UserManager();
@@ -101,7 +104,7 @@ namespace V_verPlatform.Controllers
         {
             if (stc == "1180")
             {
-                UserInfo usus =  new UserInfo() { Name = name, pw = pw, email = email };
+                UserInfo usus =  new UserInfo() { Name = name, pw = pw, email = email,regdate= DateTime.Now,power=1,status=0 };
                 int kk = userManger.register(usus);
                 if (kk == 1)
                 {
@@ -125,5 +128,50 @@ namespace V_verPlatform.Controllers
         //{
         //    return Response.Redirect("user/ index");
         //}
+        [HttpPost]
+        public ActionResult Admin(String pvd, int action=0)
+        {
+            if(action ==0)
+            {
+            if (pvd.Equals(AdminPvd))
+            {
+                ViewBag.AdminVerification = true;
+                ViewBag.pvd = pvd;
+                return View("AdminControl");
+            }
+            else
+            {
+                ViewBag.AdminVerification = false;
+                return RedirectToAction("Admin");
+            }
+            }
+            if (pvd.Equals(AdminPvd))
+            {
+                switch (action)
+                {
+                    case 1 :
+                        {
+                            if (AdminDBHelper.InitializeDatabase())
+                            {
+                                return new ContentResult() {Content="201"};
+                            }
+                            break;
+                        }
+                    default:
+                        {
+                            break;
+                        }
+                }
+                return new ContentResult() {Content="400"};
+            }
+            else
+            {
+                return new ContentResult() { Content = "403" };
+            }
+        }
+        public ActionResult Admin()
+        {
+            return View();
+        }
     }
 }

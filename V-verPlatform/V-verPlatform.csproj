@@ -123,7 +123,7 @@
   <ItemGroup>
     <Compile Include="Controllers\api\ApiUserController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
-    <Compile Include="Controllers\novelController.cs" />
+    <Compile Include="Controllers\NovelController.cs" />
     <Compile Include="Controllers\ProgromController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
@@ -133,6 +133,7 @@
     <Compile Include="Models\CommonUse\CommonData.cs" />
     <Compile Include="Models\CommonUse\EmailServer.cs" />
     <Compile Include="Models\CommonUse\XmlCommon.cs" />
+    <Compile Include="Models\DB\AdminDBHelper.cs" />
     <Compile Include="Models\DB\SQLHelper.cs" />
     <Compile Include="Models\DB\ZGXSQLHelper.cs" />
     <Compile Include="Models\Novel\NovelManager.cs" />
@@ -149,6 +150,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="App_Themes\ShowBlueStyle\Common.css" />
     <Content Include="App_Themes\ShowBlueStyle\index.css" />
     <Content Include="App_Themes\ShowBlueStyle\novel.css" />
     <Content Include="App_Themes\ShowBlueStyle\userLogin.css" />
@@ -534,21 +536,36 @@
     <Content Include="Content\js\jquery-ui.min.js" />
     <Content Include="Content\js\jquery.fullPage.min.js" />
     <Content Include="Content\js\jquery.min.js" />
+    <Content Include="SinglePage\TheDateOfForcedLanding\Content\css\Loading.css" />
+    <Content Include="SinglePage\TheDateOfForcedLanding\Content\css\Main.css" />
+    <Content Include="SinglePage\TheDateOfForcedLanding\Content\img\background.jpg" />
+    <Content Include="SinglePage\TheDateOfForcedLanding\Content\img\pngtitle.png" />
+    <Content Include="SinglePage\TheDateOfForcedLanding\Content\img\V-verlogo.png" />
+    <Content Include="SinglePage\TheDateOfForcedLanding\Content\js\jquery.min.js" />
     <Content Include="Content\js\jquery.MyFloatingBg.js" />
     <Content Include="Content\js\jquery.shCircleLoader-min.js" />
     <Content Include="Content\js\jsRotation.js" />
     <Content Include="Content\js\Loadingjs.js" />
-    <Content Include="Content\js\rainyday.min.js" />
+    <Content Include="SinglePage\TheDateOfForcedLanding\Content\js\rainyday.min.js" />
     <Content Include="Content\vegas\jquery.vegas.css" />
     <Content Include="Content\vegas\jquery.vegas.js" />
     <Content Include="Global.asax" />
+    <Content Include="SinglePage\TheDateOfForcedLanding\Content\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="SinglePage\TheDateOfForcedLanding\Content\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="SinglePage\TheDateOfForcedLanding\Content\bootstrap\css\bootstrap.css" />
+    <Content Include="SinglePage\TheDateOfForcedLanding\Content\bootstrap\css\bootstrap.min.css" />
+    <Content Include="SinglePage\TheDateOfForcedLanding\Content\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="SinglePage\TheDateOfForcedLanding\Content\bootstrap\js\bootstrap.js" />
+    <Content Include="SinglePage\TheDateOfForcedLanding\Content\bootstrap\js\bootstrap.min.js" />
+    <Content Include="SinglePage\TheDateOfForcedLanding\index.html" />
     <Content Include="somefile\kfzBJ.sql" />
     <Content Include="somefile\RegisteredEmail.html" />
-    <Content Include="somefile\Vnovel.sql" />
+    <Content Include="somefile\sqlfile\deletealltable.sql" />
+    <Content Include="somefile\sqlfile\SqlTableCreateFile\1VUserNP.sql" />
+    <Content Include="somefile\sqlfile\SqlTableCreateFile\2VKfzBjDate.sql" />
+    <Content Include="somefile\sqlfile\SqlTableCreateFile\3Vnovel.sql" />
     <Content Include="somefile\UserNP.sql" />
     <Content Include="Content\css\Loading.css" />
-    <Content Include="somefile\VKfzBjDate.sql" />
-    <Content Include="somefile\VUserNP.sql" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -579,7 +596,7 @@
   <ItemGroup>
     <Content Include="Views\Shared\footer.cshtml" />
     <Content Include="Views\Shared\header.cshtml" />
-    <Content Include="Views\Shared\layout.cshtml" />
+    <Content Include="Views\Shared\bootstraplayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\ckeditor\CHANGES.md" />
@@ -605,6 +622,13 @@
     <Content Include="Views\novel\Index.cshtml" />
     <Content Include="Views\novel\_NovelList.cshtml" />
     <Content Include="Views\novel\_NovelManager.cshtml" />
+    <Content Include="Views\User\Admin.cshtml" />
+    <Content Include="Views\User\AdminControl.cshtml" />
+    <Content Include="SinglePage\TheDateOfForcedLanding\Content\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="SinglePage\TheDateOfForcedLanding\Content\bootstrap\css\bootstrap.css.map" />
+    <Content Include="SinglePage\TheDateOfForcedLanding\Content\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="SinglePage\TheDateOfForcedLanding\Content\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="SinglePage\TheDateOfForcedLanding\Content\bootstrap\fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
